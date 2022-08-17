@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 @mixin navigation-icon {
   content: "";
   position: absolute;
@@ -14,12 +16,10 @@
   padding-top: 28.5px;
   padding-bottom: 26.5px;
   padding-left: 76px;
-  font-family: var(--general-font-family);
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 24px;
   text-align: left;
-  border-top: 1px solid var(--light-border);
+  border-top: 1px solid rgba($light-border, 0.4);
+
+  @include big-text-bold;
 
   &--unlisted {
     display: none;
@@ -40,5 +40,5 @@
 
 .navigation-item__link {
   text-decoration: none;
-  color: var(--primary-font);
+  color: $primary-font;
 }

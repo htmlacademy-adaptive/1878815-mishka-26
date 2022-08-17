@@ -1,0 +1,21 @@
+@use "../global/bootstrap.scss";
+
+.email {
+  position: relative;
+  color: $secondary-font;
+  border-bottom: 1px solid $hightlight-border;
+  text-decoration: none;
+
+  @include text;
+
+  &:hover {
+    color: $accent-font-additional;
+    border-bottom: 1px solid $hightlight-border-additional;
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    color: $accent-font-additional;
+    border-bottom: 1px solid rgba($hightlight-border-additional, 0.1);
+  }
+}

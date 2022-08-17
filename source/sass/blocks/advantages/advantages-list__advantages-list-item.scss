@@ -1,6 +1,14 @@
+@use "../global/bootstrap.scss";
+
 .advantages-list__advantages-list-item {
   position: relative;
-  padding: 41px 0;
+  padding: 20px 0;
+}
+
+.advantages-list-item__header {
+  color: $primary-font;
+
+  @include small-header;
 }
 
 .advantages-list__advantages-list-item::before {
@@ -35,15 +43,4 @@
 
 .advantages-list__advantages-list-item--gift::before {
   background-image: url("/img/icons/icon-gift.svg");
-}
-
-.advantages-list-item__header {
-  margin: 0;
-  font-family: var(--general-font-family);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  color: var(--primary-font);
 }

@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .order-popup__order-popup-form {
   position: relative;
   display: flex;
@@ -6,22 +8,18 @@
   width: 320px;
   margin: auto;
   padding: 28.5px 30px 46px;
-  background-color: var(--primary-background);
-  border: 1px solid var(--ultra-light-border);
+  background-color: $primary-background;
+  border: 1px solid $light-border;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   align-content: center;
 }
 
 .order-popup-form__title {
   margin: 0;
-  font-family: var(--general-font-family);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
-  color: var(--primary-font);
   text-align: center;
   text-transform: uppercase;
+
+  @include big-header;
 }
 
 .order-popup-form__fieldset {
@@ -33,12 +31,8 @@
 .order-popup-form__legend {
   margin: 0;
   padding: 18px 0;
-  font-family: var(--general-font-family);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  color: var(--secondary-font);
+  color: $secondary-font;
   text-align: center;
+
+  @include text;
 }

@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .header {
   display: grid;
   box-sizing: border-box;
@@ -5,7 +7,6 @@
   height: 79px;
   width: 100%;
   padding: 10px 22px;
-  font-family: var(--general-font-family);
-  border-top: 1px solid var(--light-border);
-  border-bottom: 1px solid var(--light-border);
+  border-top: 1px solid rgba($light-border, 0.4);
+  border-bottom: 1px solid rgba($light-border, 0.4);
 }

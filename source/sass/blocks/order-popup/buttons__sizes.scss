@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .buttons__sizes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -11,25 +13,23 @@
   box-sizing: border-box;
   justify-content: center;
   padding: 16px 13px 13px;
-  border: 2px solid var(--light-border);
-  color: var(--secondary-font);
-  font-family: var(--general-font-family);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 16px;
+  border: 2px solid rgba($light-border, 0.3);
+  color: $secondary-font;
 
-  &:hover {
-    border: 2px solid var(--ultra-light-border);
-  }
+  @include big-text-bold;
 
   &--active {
-    border: 2px solid var(--hightlight-border);
+    border: 2px solid $hightlight-border;
   }
 
-  &--disabled {
-    background-color: var(--dark-background);
-    border: 2px solid var(--dark-border);
-    color: var(--transparent-font);
+  &:hover {
+    border: 2px solid $light-border;
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    background-color: $dark-background;
+    border: 2px solid $dark-border;
+    color: rgba($hightlight-font, 0.3);
   }
 }

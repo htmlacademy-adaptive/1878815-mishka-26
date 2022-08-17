@@ -1,14 +1,12 @@
+@use "../global/bootstrap.scss";
+
 .contacts__contacts-list {
   flex-grow: 1;
   margin: 0;
   padding: 7px 0;
-  font-family: var(--general-font-family);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  color: var(--secondary-font);
+  color: $secondary-font;
+
+  @include text;
 }
 
 .contacts-list__contact-details {

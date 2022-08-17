@@ -1,0 +1,40 @@
+@use "./global/bootstrap.scss";
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 260px;
+  padding: 16px 13px 13px;
+  background-color: $primary-background;
+  border: 2px solid $dark-border;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $secondary-font;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $dark-background;
+    border: 2px solid $dark-border;
+    color: $hightlight-font;
+  }
+
+  &:disabled {
+    background-color: $dark-background;
+    border: 2px solid $dark-border;
+    color: rgba($hightlight-font, 0.3);
+  }
+
+  &--disabled {
+    background-color: $dark-background;
+    color: rgba($hightlight-font, 0.3);
+  }
+
+  &--disabled:hover {
+    background-color: $dark-background;
+    color: rgba($hightlight-font, 0.3);
+  }
+}

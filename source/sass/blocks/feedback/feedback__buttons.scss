@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .feedback__buttons {
   display: flex;
   padding: 10px 0;
@@ -15,19 +17,16 @@
   display: inline-block;
   box-sizing: border-box;
   padding: 13px 42px 13px 38px;
-  background: var(--primary-background);
-  border: 1px solid var(--light-border);
-  fill: var(--primary-icon);
+  background: $primary-background;
+  border: 1px solid rgba($light-border, 0.4);
+  cursor: pointer;
+  fill: $primary-icon;
 
   &:hover {
-    fill: var(--transparent-primary-icon);
+    fill: rgba($primary-icon, 0.6);
   }
 
   &:disabled {
-    fill: var(--ultra-transparent-primary-icon);
+    fill: rgba($primary-icon, 0.3);
   }
-}
-
-.toggle__arrow {
-  fill: correntcolor;
 }

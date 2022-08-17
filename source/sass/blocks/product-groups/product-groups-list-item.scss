@@ -1,19 +1,21 @@
+@use "../global/bootstrap.scss";
+
 .product-groups-list__product-groups-list-item {
   padding: 21px 27px 22px 30px;
 
   &:nth-child(even) {
-    background-color: var(--hightlight-background-additional);
+    background-color: $hightlight-background-additional;
 
     &:hover {
-      background-color: var(--hightlight-background-additional-secondary);
+      background-color: lighten(saturate($hightlight-background-additional, 4%), 1%);
     }
   }
 
   &:nth-child(odd) {
-    background-color: var(--hightlight-background);
+    background-color: $hightlight-background;
 
     &:hover {
-      background-color: var(--hightlight-background-secondary);
+      background-color: lighten(desaturate($hightlight-background, 2%), 1%);
     }
   }
 }
@@ -23,4 +25,14 @@
   grid-template-columns: 130px 60px;
   gap: 73px;
   text-decoration: none;
+  fill: rgba($hightlight-icon, 0.5);
+
+  &:hover {
+    fill: rgba($hightlight-icon, 0.7);
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    fill: rgba($hightlight-icon, 0.3);
+  }
 }

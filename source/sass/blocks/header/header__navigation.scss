@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .header__navigation {
   position: relative;
   display: flex;
@@ -13,8 +15,8 @@
   z-index: 1;
   top: 65px;
   right: -22px;
-  background-color: var(--primary-background);
-  border-bottom: 1px solid var(--light-border);
+  background-color: $primary-background;
+  border-bottom: 1px solid rgba($light-border, 0.4);
 
   &--closed {
     display: none;
@@ -25,12 +27,4 @@
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.site-list {
-
-}
-
-.user-list {
-
 }

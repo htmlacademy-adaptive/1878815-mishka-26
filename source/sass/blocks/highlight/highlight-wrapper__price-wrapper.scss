@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .highlight-wrapper__price-wrapper {
   display: flex;
   position: relative;
@@ -7,17 +9,7 @@
 
 .price-wrapper__price {
   padding: 8px 0 20px;
-  font-family: var(--general-font-family);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  color: var(--secondary-font);
-}
+  color: $secondary-font;
 
-.price-wrapper__button {
-  width: 260px;
-  border: 2px solid var(--dark-border);
-  color: var(--secondary-font);
-  background-color: var(--primary-background);
+  @include small-header;
 }

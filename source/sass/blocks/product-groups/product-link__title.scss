@@ -1,9 +1,8 @@
+@use "../global/bootstrap.scss";
+
 .product-link__title {
   margin: 0;
-  font-family: var(--general-font-family);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 24px;
-  color: var(--hightlight-font);
+  color: $hightlight-font;
+
+  @include medium-header;
 }
