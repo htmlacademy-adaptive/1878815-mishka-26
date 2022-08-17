@@ -1,0 +1,35 @@
+.footer__made {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.made__text {
+  font-family: var(--general-font-family);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.made__link {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 15px;
+  align-items: center;
+  justify-items: center;
+  color: var(--accent-icon);
+
+  &:hover {
+    color: var(--hightlight-icon);
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    color: var(--hightlight-icon);
+    opacity: 0.3;
+  }
+}
+
+.made__logo {
+  fill: currentColor;
+}

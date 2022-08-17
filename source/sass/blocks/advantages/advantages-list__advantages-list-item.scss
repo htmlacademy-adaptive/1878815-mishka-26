@@ -1,0 +1,49 @@
+.advantages-list__advantages-list-item {
+  position: relative;
+  padding: 41px 0;
+}
+
+.advantages-list__advantages-list-item::before {
+  position: absolute;
+  content: "";
+  width: 55px;
+  height: 55px;
+  top: -16px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.advantages-list__advantages-list-item--eco::before {
+  background-image: url("/img/icons/icon-flower.svg");
+}
+
+.advantages-list__advantages-list-item--price::before {
+  background-image: url("/img/icons/icon-money.svg");
+}
+
+.advantages-list__advantages-list-item--likes::before {
+  background-image: url("/img/icons/icon-heart.svg");
+}
+
+.advantages-list__advantages-list-item--handmade::before {
+  background-image: url("/img/icons/icon-knit.svg");
+}
+
+.advantages-list__advantages-list-item--local::before {
+  background-image: url("/img/icons/icon-rocket.svg");
+}
+
+.advantages-list__advantages-list-item--gift::before {
+  background-image: url("/img/icons/icon-gift.svg");
+}
+
+.advantages-list-item__header {
+  margin: 0;
+  font-family: var(--general-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: var(--primary-font);
+}

@@ -1,0 +1,36 @@
+.header__navigation {
+  position: relative;
+  display: flex;
+  grid-column: 3 / -1;
+}
+
+.navigation__wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 320px;
+  z-index: 1;
+  top: 65px;
+  right: -22px;
+  background-color: var(--primary-background);
+  border-bottom: 1px solid var(--light-border);
+
+  &--closed {
+    display: none;
+  }
+}
+
+.navigation__navigation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-list {
+
+}
+
+.user-list {
+
+}

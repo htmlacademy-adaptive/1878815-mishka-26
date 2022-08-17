@@ -1,0 +1,44 @@
+@mixin navigation-icon {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 18px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  left: 32px;
+}
+
+.navigation-list__navigation-item {
+  position: relative;
+  display: flex;
+  padding-top: 28.5px;
+  padding-bottom: 26.5px;
+  padding-left: 76px;
+  font-family: var(--general-font-family);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  border-top: 1px solid var(--light-border);
+
+  &--unlisted {
+    display: none;
+  }
+
+  &--search::before {
+    background-image: url("/img/icons/search.svg");
+
+    @include navigation-icon;
+  }
+
+  &--cart::before {
+    background-image: url("/img/icons/cart.svg");
+
+    @include navigation-icon;
+  }
+}
+
+.navigation-item__link {
+  text-decoration: none;
+  color: var(--primary-font);
+}

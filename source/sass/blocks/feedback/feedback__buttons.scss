@@ -1,0 +1,33 @@
+.feedback__buttons {
+  display: flex;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feedback__toggles {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 32px;
+}
+
+.feedback__toggle {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 13px 42px 13px 38px;
+  background: var(--primary-background);
+  border: 1px solid var(--light-border);
+  fill: var(--primary-icon);
+
+  &:hover {
+    fill: var(--transparent-primary-icon);
+  }
+
+  &:disabled {
+    fill: var(--ultra-transparent-primary-icon);
+  }
+}
+
+.toggle__arrow {
+  fill: correntcolor;
+}

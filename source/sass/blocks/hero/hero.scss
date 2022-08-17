@@ -1,0 +1,14 @@
+.main-container__hero {
+  margin: 0;
+}
+
+.hero__wrapper {
+  background-color: var(--secondary-background);
+  height: 100%;
+  padding: 73px 23px;
+}
+
+.hero__wrapper--index {
+  padding-bottom: 120px;
+  background-image: url("/img/backgrounds/hero-mobile.jpg");
+}

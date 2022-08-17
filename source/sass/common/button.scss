@@ -1,0 +1,40 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 260px;
+  padding: 16px 13px 13px;
+  color: var(--secondary-font);
+  text-decoration: none;
+  border: 2px solid var(--dark-background);
+  font-family: var(--general-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--dark-background);
+    border: 2px solid var(--dark-border);
+    color: var(--hightlight-font);
+  }
+
+  &:disabled {
+    background: var(--dark-background);
+    border: 2px solid var(--dark-bordert);
+    color: var(--transparent-font);
+  }
+
+  &--disabled {
+    background: var(--dark-background);
+    background-color: var(--dark-border);
+    color: var(--transparent-font);
+  }
+
+  &--disabled:hover {
+    background: var(--dark-background);
+    background-color: var(--dark-border);
+    color: var(--transparent-font);
+  }
+}

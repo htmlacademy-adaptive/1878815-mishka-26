@@ -1,0 +1,26 @@
+.product-groups-list__product-groups-list-item {
+  padding: 21px 27px 22px 30px;
+
+  &:nth-child(even) {
+    background-color: var(--hightlight-background-additional);
+
+    &:hover {
+      background-color: var(--hightlight-background-additional-secondary);
+    }
+  }
+
+  &:nth-child(odd) {
+    background-color: var(--hightlight-background);
+
+    &:hover {
+      background-color: var(--hightlight-background-secondary);
+    }
+  }
+}
+
+.product-groups-list-item__product-link {
+  display: grid;
+  grid-template-columns: 130px 60px;
+  gap: 73px;
+  text-decoration: none;
+}

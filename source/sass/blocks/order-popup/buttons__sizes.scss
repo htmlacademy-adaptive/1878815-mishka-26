@@ -1,0 +1,35 @@
+.buttons__sizes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 7px;
+  padding: 6px 0 30px;
+  justify-content: space-between;
+}
+
+.sizes__size-label {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 16px 13px 13px;
+  border: 2px solid var(--light-border);
+  color: var(--secondary-font);
+  font-family: var(--general-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+
+  &:hover {
+    border: 2px solid var(--ultra-light-border);
+  }
+
+  &--active {
+    border: 2px solid var(--hightlight-border);
+  }
+
+  &--disabled {
+    background-color: var(--dark-background);
+    border: 2px solid var(--dark-border);
+    color: var(--transparent-font);
+  }
+}

@@ -1,0 +1,44 @@
+.order-popup__order-popup-form {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 320px;
+  margin: auto;
+  padding: 28.5px 30px 46px;
+  background-color: var(--primary-background);
+  border: 1px solid var(--ultra-light-border);
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  align-content: center;
+}
+
+.order-popup-form__title {
+  margin: 0;
+  font-family: var(--general-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: var(--primary-font);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.order-popup-form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-popup-form__legend {
+  margin: 0;
+  padding: 18px 0;
+  font-family: var(--general-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: var(--secondary-font);
+  text-align: center;
+}

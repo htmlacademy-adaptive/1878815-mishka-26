@@ -1,0 +1,27 @@
+.highlight-wrapper__product-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-info__description {
+  margin: 0;
+  padding: 12px 0 15px;
+  font-family: var(--general-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--secondary-font);
+}
+
+.product-info__details {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  font-family: var(--general-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--secondary-font);
+}
