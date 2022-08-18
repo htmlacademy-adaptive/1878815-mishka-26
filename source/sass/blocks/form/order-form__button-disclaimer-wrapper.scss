@@ -1,0 +1,9 @@
+@use "../global/bootstrap.scss";
+
+.button-disclaimer-wrapper__disclaimer {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: $secondary-font;
+  padding-bottom: 18px;
+}

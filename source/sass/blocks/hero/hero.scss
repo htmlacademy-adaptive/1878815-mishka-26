@@ -1,9 +1,11 @@
+@use "../global/bootstrap.scss";
+
 .main-container__hero {
   margin: 0;
 }
 
 .hero__wrapper {
-  background-color: var(--secondary-background);
+  background-color: $secondary-background;
   height: 100%;
   padding: 73px 23px;
 }

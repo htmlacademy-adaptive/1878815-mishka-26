@@ -1,0 +1,45 @@
+@use "../global/bootstrap.scss";
+
+.form-label__input-field {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 18px 0;
+  border: none;
+  border-bottom: 2px solid $super-dark-border;
+  font-size: 19px;
+  line-height: 18px;
+  color: #000000;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border-bottom: 2px solid $hightlight-border;
+    outline: none;
+  }
+
+  &[type="text"]::-webkit-input-placeholder {
+    color: rgba($secondary-font, 0.3);
+
+    @include big-text;
+  }
+
+  &--textarea {
+    font-family: "Opensans", "PT Sans", sans-serif;
+    border: 2px solid $super-dark-border;
+    padding: 15px;
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      border: 2px solid $hightlight-border;
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgba($secondary-font, 0.3);
+      font-family: "Opensans", "PT Sans", sans-serif;
+
+      @include big-text;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use "../global/bootstrap.scss";
+
+.order-form__order-form-fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  border: none;
+  border-top: 1px solid $hightlight-border;
+}
+
+.order-form-fieldset__field-title {
+  padding-right: 20px;
+  text-transform: uppercase;
+  color: $accent-font;
+
+  @include small-header;
+}

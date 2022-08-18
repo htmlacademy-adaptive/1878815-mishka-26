@@ -1,0 +1,8 @@
+@use "../global/bootstrap.scss";
+
+.order-wrapper__order-form-description {
+  padding-bottom: 29px;
+  color: $secondary-font;
+
+  @include text-small;
+}
