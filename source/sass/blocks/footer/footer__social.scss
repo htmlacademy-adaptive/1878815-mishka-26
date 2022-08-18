@@ -31,5 +31,6 @@
   &--disabled:hover {
     fill: $hightlight-icon;
     opacity: 0.3;
+    cursor: not-allowed;
   }
 }

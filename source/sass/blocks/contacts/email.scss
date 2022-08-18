@@ -17,5 +17,6 @@
   &--disabled:hover {
     color: $accent-font-additional;
     border-bottom: 1px solid rgba($hightlight-border-additional, 0.1);
+    cursor: not-allowed;
   }
 }

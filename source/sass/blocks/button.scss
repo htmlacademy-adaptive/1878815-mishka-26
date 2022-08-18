@@ -31,10 +31,12 @@
   &--disabled {
     background-color: $dark-background;
     color: rgba($hightlight-font, 0.3);
+    cursor: not-allowed;
   }
 
   &--disabled:hover {
     background-color: $dark-background;
     color: rgba($hightlight-font, 0.3);
+    cursor: not-allowed;
   }
 }

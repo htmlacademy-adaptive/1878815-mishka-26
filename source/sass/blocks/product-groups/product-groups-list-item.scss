@@ -34,5 +34,6 @@
   &--disabled,
   &--disabled:hover {
     fill: rgba($hightlight-icon, 0.3);
+    cursor: not-allowed;
   }
 }

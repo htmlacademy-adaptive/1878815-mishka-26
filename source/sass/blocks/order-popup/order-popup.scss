@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .order-popup {
   display: none;
 
@@ -5,7 +7,7 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    background-color: var(--transparent-primary-background);
+    background-color: rgba($primary-background, 0.9);
     top: 0;
     left: 0;
     width: 100%;

@@ -28,5 +28,6 @@
 
   &:disabled {
     fill: rgba($primary-icon, 0.3);
+    cursor: not-allowed;
   }
 }
