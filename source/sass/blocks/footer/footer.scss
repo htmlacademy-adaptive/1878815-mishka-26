@@ -1,0 +1,8 @@
+.page__footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 25px 30px 23px;
+  background-color: $secondary-background;
+  align-items: center;
+  justify-items: center;
+}

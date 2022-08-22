@@ -1,0 +1,31 @@
+.product-groups-list-item__product-link {
+  display: grid;
+  padding: 21px 27px 22px 30px;
+  grid-template-columns: 130px 60px;
+  gap: 73px;
+  text-decoration: none;
+  fill: rgba($hightlight-icon, 0.5);
+
+  &:hover {
+    fill: rgba($hightlight-icon, 0.7);
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    fill: rgba($hightlight-icon, 0.3);
+    cursor: not-allowed;
+  }
+}
+
+.product-link__title {
+  margin: 0;
+  color: $hightlight-font;
+
+  @include medium-header;
+}
+
+
+.product-link__icon {
+  justify-self: center;
+  align-self: center;
+}

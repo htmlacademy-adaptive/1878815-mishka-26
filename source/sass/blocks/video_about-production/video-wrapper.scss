@@ -1,0 +1,19 @@
+.video-block__video-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-wrapper__video-button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  left: 28%;
+  top: 25%;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}

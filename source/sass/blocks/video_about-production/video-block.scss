@@ -1,0 +1,20 @@
+.our-production-wrapper__video-block {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgba($dark-border, 0.2);
+  padding: 34px;
+  align-content: center;
+  justify-content: center;
+}
+
+.video-block__video-title {
+  color: $primary-font;
+
+  @include medium-header;
+}
+
+.video-block__video-description {
+  font-size: 13px;
+  line-height: 24px;
+  color: $secondary-font;
+}

@@ -1,8 +1,0 @@
-@use "../global/bootstrap.scss";
-
-.feedback-wrapper__feedback-title {
-  margin: 0;
-  color: $primary-font;
-
-  @include big-header;
-}

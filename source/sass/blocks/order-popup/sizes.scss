@@ -1,0 +1,7 @@
+.popup-form-fieldset__sizes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 7px;
+  padding: 6px 0 30px;
+  justify-content: space-between;
+}

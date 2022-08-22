@@ -1,0 +1,10 @@
+.product-info__details {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  color: $secondary-font;
+
+  @include text;
+
+  line-height: 24px;
+}

@@ -1,0 +1,12 @@
+.form-container__order-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 17px 30px;
+}
+
+.order-wrapper__order-form-description {
+  padding-bottom: 29px;
+  color: $secondary-font;
+
+  @include text-small;
+}

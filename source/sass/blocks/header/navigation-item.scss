@@ -1,0 +1,40 @@
+@mixin navigation-icon {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 18px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  left: 32px;
+}
+
+.navigation-list__navigation-item {
+  position: relative;
+  display: flex;
+  padding: 27px 30px 27px 76px;
+  text-align: left;
+  border-bottom: 1px solid rgba($light-border, 0.4);
+
+  @include big-text-bold;
+
+  &--unlisted {
+    display: none;
+  }
+
+  &--search::before {
+    background-image: url("../img/icons/search.svg");
+
+    @include navigation-icon;
+  }
+
+  &--cart::before {
+    background-image: url("../img/icons/cart.svg");
+
+    @include navigation-icon;
+  }
+}
+
+.navigation-item__link {
+  text-decoration: none;
+  color: $primary-font;
+}

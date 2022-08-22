@@ -1,8 +1,0 @@
-@use "../global/bootstrap.scss";
-
-.hero__header {
-  margin: 0;
-  text-align: center;
-
-  @include huge-header;
-}

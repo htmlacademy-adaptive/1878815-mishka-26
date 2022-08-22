@@ -1,0 +1,12 @@
+.advantages__advantages-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
+.advantages-wrapper__advantages-header {
+  color: $primary-font;
+
+  @include big-header;
+}

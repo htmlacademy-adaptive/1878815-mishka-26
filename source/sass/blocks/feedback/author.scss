@@ -1,0 +1,17 @@
+.review__author {
+  padding: 16px 0;
+}
+
+.author__name {
+  color: $primary-font;
+  font-style: normal;
+
+  @include big-text-bold;
+}
+
+.author__social {
+  color: $secondary-font;
+  font-style: normal;
+
+  @include big-text;
+}
