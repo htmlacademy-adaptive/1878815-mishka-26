@@ -16,24 +16,18 @@
   src: url("/fonts/opensansbold.woff2") format("woff2");
   font-display: swap;
 }
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
+
 .button {
   display: inline-block;
   box-sizing: border-box;
@@ -50,7 +44,7 @@
   text-decoration: none;
   cursor: pointer;
 }
-.button:hover {
+.button:hover, .button:focus, .button:focus-visible {
   background-color: #444444;
   border: 2px solid #444444;
   color: #ffffff;
@@ -59,9 +53,11 @@
   background-color: #444444;
   border: 2px solid #444444;
   color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
 }
 .button--disabled {
   background-color: #444444;
+  border: 2px solid #444444;
   color: rgba(255, 255, 255, 0.3);
   cursor: not-allowed;
 }
@@ -77,54 +73,27 @@
   font-family: "Opensans", "PT Sans", sans-serif;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 39px;
 }
 
-.main-index__separator {
+.main-container__separator {
   display: flex;
   flex-grow: 1;
   height: 6px;
   margin: 0;
   border: none;
-  background-image: url("/img/backgrounds/zigzag-line.svg");
+  background-image: url("../img/backgrounds/zigzag-line.svg");
   background-size: contain;
   background-position: center center;
   background-repeat: repeat-x;
 }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .header {
   display: grid;
   box-sizing: border-box;
@@ -136,80 +105,6 @@
   border-bottom: 1px solid rgba(198, 198, 198, 0.4);
 }
 
-.header__logo {
-  height: 35px;
-  width: 86px;
-  margin: auto;
-  padding: 10px;
-  align-content: center;
-  justify-content: center;
-  grid-column: 2/-2;
-}
-
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.header__navigation {
-  position: relative;
-  display: flex;
-  grid-column: 3/-1;
-}
-
-.navigation__wrapper {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 320px;
-  z-index: 1;
-  top: 65px;
-  right: -22px;
-  background-color: #ffffff;
-  border-bottom: 1px solid rgba(198, 198, 198, 0.4);
-}
-.navigation__wrapper--closed {
-  display: none;
-}
-
-.navigation__navigation-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .navigation__toggle {
   display: block;
   box-sizing: border-box;
@@ -221,42 +116,46 @@
   background-color: #ffffff;
   background-position: center center;
   background-repeat: no-repeat;
+  grid-column: 3/-1;
 }
-
 .navigation__toggle--closed {
-  background-image: url("/img/icons/menu-closed.svg");
+  background-image: url("../img/icons/menu-closed.svg");
 }
-
 .navigation__toggle--opened {
-  background-image: url("/img/icons/menu-opened.svg");
+  background-image: url("../img/icons/menu-opened.svg");
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
+.header__navigation {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1;
+  top: 65px;
+  right: -22px;
+  border-top: 1px solid rgba(198, 198, 198, 0.4);
+  align-content: center;
+  background-color: #ffffff;
 }
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
+.header__navigation--closed {
+  display: none;
 }
+
+.navigation__navigation-list {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
 .navigation-list__navigation-item {
   position: relative;
   display: flex;
-  padding-top: 28.5px;
-  padding-bottom: 26.5px;
-  padding-left: 76px;
+  padding: 27px 30px 27px 76px;
   text-align: left;
-  border-top: 1px solid rgba(198, 198, 198, 0.4);
+  border-bottom: 1px solid rgba(198, 198, 198, 0.4);
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -265,7 +164,7 @@
   display: none;
 }
 .navigation-list__navigation-item--search::before {
-  background-image: url("/img/icons/search.svg");
+  background-image: url("../img/icons/search.svg");
   content: "";
   position: absolute;
   width: 21px;
@@ -275,7 +174,7 @@
   left: 32px;
 }
 .navigation-list__navigation-item--cart::before {
-  background-image: url("/img/icons/cart.svg");
+  background-image: url("../img/icons/cart.svg");
   content: "";
   position: absolute;
   width: 21px;
@@ -290,67 +189,32 @@
   color: #000000;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.main-container__hero {
-  margin: 0;
+.header__logo {
+  height: 35px;
+  width: 86px;
+  margin: auto;
+  padding: 10px;
+  align-content: center;
+  justify-content: center;
+  grid-column: 2/-2;
 }
 
-.hero__wrapper {
+.hero__hero-wrapper {
   background-color: #f1f1f1;
   height: 100%;
   padding: 73px 23px;
 }
-
-.hero__wrapper--index {
+.hero__hero-wrapper--index {
   padding-bottom: 120px;
-  background-image: url("/img/backgrounds/hero-mobile.jpg");
+  background-image: url("../img/backgrounds/hero-mobile.jpg");
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.hero__header {
-  margin: 0;
-  text-align: center;
+.hero-wrapper__header {
   font-size: 27px;
   font-weight: 700;
   line-height: 30px;
-}
-
-.main-container__product-groups {
   margin: 0;
+  text-align: center;
 }
 
 .product-groups__product-groups-list {
@@ -361,26 +225,8 @@
   list-style: none;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .product-groups-list__product-groups-list-item {
-  padding: 21px 27px 22px 30px;
+  padding: 0;
 }
 .product-groups-list__product-groups-list-item:nth-child(even) {
   background-color: #46c1ae;
@@ -397,6 +243,7 @@
 
 .product-groups-list-item__product-link {
   display: grid;
+  padding: 21px 27px 22px 30px;
   grid-template-columns: 130px 60px;
   gap: 73px;
   text-decoration: none;
@@ -410,24 +257,6 @@
   cursor: not-allowed;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .product-link__title {
   margin: 0;
   color: #ffffff;
@@ -441,10 +270,6 @@
   align-self: center;
 }
 
-.main-index__highlight {
-  margin: 0;
-}
-
 .highlight__highlight-wrapper {
   display: flex;
   padding: 30px 31px 30px;
@@ -453,24 +278,10 @@
   height: 100%;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
+.highlight-wrapper__image {
+  padding: 20px 0;
 }
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
+
 .highlight-wrapper__highlight-header {
   display: flex;
   flex-wrap: wrap;
@@ -495,50 +306,6 @@
   line-height: 20px;
 }
 
-.highlight-wrapper__product-info {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.product-info__description {
-  margin: 0;
-  padding: 12px 0 15px;
-  color: #444444;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 30px;
-  line-height: 24px;
-}
-
-.product-info__details {
-  flex-grow: 1;
-  margin: 0;
-  padding: 0;
-  color: #444444;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 30px;
-  line-height: 24px;
-}
-
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .details__details-wrapper {
   display: grid;
   grid-template-columns: 97px 1fr;
@@ -558,28 +325,32 @@
   margin: 0;
 }
 
-.highlight-wrapper__image {
-  padding: 20px 0;
+.product-info__details {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  color: #444444;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  line-height: 24px;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
+.highlight-wrapper__product-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-info__description {
+  margin: 0;
+  padding: 12px 0 15px;
+  color: #444444;
   font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
+  font-size: 15px;
+  line-height: 30px;
+  line-height: 24px;
 }
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
+
 .highlight-wrapper__price-wrapper {
   display: flex;
   position: relative;
@@ -595,24 +366,6 @@
   line-height: 20px;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .order-popup {
   display: none;
 }
@@ -628,25 +381,7 @@
   z-index: 1;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.order-popup__order-popup-form {
+.order-popup__popup-form {
   position: relative;
   display: flex;
   box-sizing: border-box;
@@ -660,7 +395,7 @@
   align-content: center;
 }
 
-.order-popup-form__title {
+.popup-form__popup-form-title {
   margin: 0;
   text-align: center;
   text-transform: uppercase;
@@ -669,13 +404,21 @@
   line-height: 30px;
 }
 
-.order-popup-form__fieldset {
+.popup-form__add-to-cart-button {
+  color: #ffffff;
+  border: 2px solid #63d1bb;
+  background-color: #63d1bb;
+  font-size: 17px;
+  line-height: 16px;
+}
+
+.popup-form__popup-form-fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.order-popup-form__legend {
+.popup-form-fieldset__popup-form-legend {
   margin: 0;
   padding: 18px 0;
   color: #444444;
@@ -685,25 +428,7 @@
   line-height: 30px;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.buttons__sizes {
+.popup-form-fieldset__sizes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 7px;
@@ -713,50 +438,33 @@
 
 .sizes__size-label {
   display: flex;
+}
+
+.size-label__button {
+  display: inline-block;
   box-sizing: border-box;
   justify-content: center;
-  padding: 16px 13px 13px;
+  align-content: center;
+  padding: 13px 33px;
   border: 2px solid rgba(198, 198, 198, 0.3);
   color: #444444;
+  text-transform: uppercase;
+  cursor: pointer;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
 }
-.sizes__size-label--active {
-  border: 2px solid #63d1bb;
-}
-.sizes__size-label:hover {
+.size-label__button:hover {
   border: 2px solid #c6c6c6;
 }
-
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.order-popup-form__add-to-cart-button {
-  color: #ffffff;
+.size-label__size-input:checked + .size-label__button {
   border: 2px solid #63d1bb;
-  background-color: #63d1bb;
-  font-size: 17px;
-  line-height: 16px;
 }
-
-.main-index__advantages {
-  margin: 0;
+.size-label__size-input:disabled + .size-label__button {
+  background-color: #444444;
+  border: 2px solid #444444;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
 }
 
 .advantages__advantages-wrapper {
@@ -766,24 +474,6 @@
   padding: 0 30px;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .advantages-wrapper__advantages-header {
   color: #000000;
   font-weight: 700;
@@ -799,36 +489,10 @@
   list-style: none;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .advantages-list__advantages-list-item {
   position: relative;
   padding: 20px 0;
 }
-
-.advantages-list-item__header {
-  color: #000000;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
-}
-
 .advantages-list__advantages-list-item::before {
   position: absolute;
   content: "";
@@ -838,33 +502,30 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 .advantages-list__advantages-list-item--eco::before {
-  background-image: url("/img/icons/icon-flower.svg");
+  background-image: url("../img/icons/icon-flower.svg");
 }
-
 .advantages-list__advantages-list-item--price::before {
-  background-image: url("/img/icons/icon-money.svg");
+  background-image: url("../img/icons/icon-money.svg");
 }
-
 .advantages-list__advantages-list-item--likes::before {
-  background-image: url("/img/icons/icon-heart.svg");
+  background-image: url("../img/icons/icon-heart.svg");
 }
-
 .advantages-list__advantages-list-item--handmade::before {
-  background-image: url("/img/icons/icon-knit.svg");
+  background-image: url("../img/icons/icon-knit.svg");
 }
-
 .advantages-list__advantages-list-item--local::before {
-  background-image: url("/img/icons/icon-rocket.svg");
+  background-image: url("../img/icons/icon-rocket.svg");
 }
-
 .advantages-list__advantages-list-item--gift::before {
-  background-image: url("/img/icons/icon-gift.svg");
+  background-image: url("../img/icons/icon-gift.svg");
 }
 
-.main-index__feedback {
-  margin: 0;
+.advantages-list-item__header {
+  color: #000000;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
 }
 
 .feedback__feedback-wrapper {
@@ -874,50 +535,6 @@
   padding: 45px 30px 45px;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.feedback-wrapper__feedback-title {
-  margin: 0;
-  color: #000000;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
-}
-
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .feedback-wrapper__feedback-list {
   display: flex;
   list-style: none;
@@ -969,24 +586,6 @@
   line-height: 24px;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .feedback__buttons {
   display: flex;
   padding: 10px 0;
@@ -1017,63 +616,26 @@
   cursor: not-allowed;
 }
 
-.main-index__contacts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 39px;
-}
-
-.contacts__wrapper {
+.contacts__contacts-wrapper {
   display: flex;
   flex-wrap: wrap;
   padding: 20px 30px;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.contacts__header {
+.contacts-wrapper__header {
   color: #000000;
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
+.contacts-wrapper__map {
+  display: flex;
+  padding: 33px 0;
+  margin-left: -30px;
 }
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.contacts__contacts-list {
+
+.contacts-wrapper__contacts-list {
   flex-grow: 1;
   margin: 0;
   padding: 7px 0;
@@ -1101,37 +663,11 @@
   margin: 0;
 }
 
-.contacts__map {
-  display: flex;
-  padding: 33px 0;
-}
-
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .email {
   position: relative;
   color: #444444;
   border-bottom: 1px solid #63d1bb;
   text-decoration: none;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 30px;
 }
 .email:hover {
   color: #46c1ae;
@@ -1143,24 +679,6 @@
   cursor: not-allowed;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .page__footer {
   display: grid;
   grid-template-columns: 1fr;
@@ -1170,24 +688,6 @@
   justify-items: center;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .footer__social {
   display: flex;
   margin: 0;
@@ -1196,14 +696,14 @@
   border-bottom: 1px solid rgba(198, 198, 198, 0.4);
 }
 
-.social-item {
+.social__social-item {
   margin: 0;
   padding: 0;
   align-items: center;
   justify-items: center;
 }
 
-.social__link {
+.social-item__link {
   display: inline-block;
   box-sizing: border-box;
   padding: 15px;
@@ -1211,33 +711,15 @@
   justify-items: center;
   fill: #000000;
 }
-.social__link:hover {
+.social-item__link:hover {
   fill: #149080;
 }
-.social__link--disabled, .social__link--disabled:hover {
+.social-item__link--disabled, .social-item__link--disabled:hover {
   fill: #149080;
   opacity: 0.3;
   cursor: not-allowed;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .footer__made {
   display: flex;
   align-items: center;
@@ -1267,60 +749,37 @@
   cursor: not-allowed;
 }
 
-.main-container__form-container {
-  margin: 0;
-}
-
 .form-container__order-wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 17px 30px 38px;
+  padding: 17px 30px;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.button-disclaimer-wrapper__disclaimer {
-  margin: 0;
-  font-size: 14px;
-  line-height: 16px;
+.order-wrapper__order-form-description {
+  padding-bottom: 29px;
   color: #444444;
-  padding-bottom: 18px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
+.order-form__order-form-fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  border: none;
+  border-top: 1px solid #63d1bb;
 }
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
+
+.order-form-fieldset__field-title {
+  padding-right: 20px;
+  text-transform: uppercase;
+  color: #63d1bb;
   font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
+  font-size: 17px;
+  line-height: 20px;
 }
+
 .order-form__form-label {
   display: grid;
   padding: 10px 0;
@@ -1342,86 +801,10 @@
 .form-label__input-caption--name {
   padding: 10px 0;
 }
-
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.order-form__order-form-fieldset {
-  display: flex;
-  flex-direction: column;
-  padding: 15px 0;
-  border: none;
-  border-top: 1px solid #63d1bb;
+.form-label__input:disabled ~ .form-label__input-caption {
+  cursor: not-allowed;
 }
 
-.order-form-fieldset__field-title {
-  padding-right: 20px;
-  text-transform: uppercase;
-  color: #63d1bb;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
-}
-
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.order-wrapper__order-form-description {
-  padding-bottom: 29px;
-  color: #444444;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-}
-
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .form-label__input-custom {
   position: relative;
   display: inline-block;
@@ -1430,13 +813,13 @@
   height: 38px;
   border: 2px solid #444444;
 }
-.form-label__input-custom:hover {
+.form-label__input-custom:hover, .form-label__input-custom:focus, .form-label__input-custom:focus-visible {
   border-color: #63d1bb;
 }
 .form-label__input-custom--radio {
   border-radius: 50%;
 }
-.form-label__input[type=radio]:checked + .form-label__input-custom--radio::after {
+.form-label__input--radio:checked + .form-label__input-custom--radio::after {
   position: absolute;
   top: 23%;
   left: 25%;
@@ -1446,7 +829,7 @@
   background-color: #63d1bb;
   content: "";
 }
-.form-label__input[type=checkbox]:checked + .form-label__input-custom--checkbox::before, .form-label__input[type=checkbox]:checked + .form-label__input-custom--checkbox::after {
+.form-label__input--checkbox:checked + .form-label__input-custom--checkbox::before, .form-label__input--checkbox:checked + .form-label__input-custom--checkbox::after {
   position: absolute;
   display: block;
   top: 50%;
@@ -1457,7 +840,7 @@
   transform: rotate(135deg);
   content: "";
 }
-.form-label__input[type=checkbox]:checked + .form-label__input-custom--checkbox::after {
+.form-label__input--checkbox:checked + .form-label__input-custom--checkbox::after {
   top: 50%;
   left: -19%;
   background: linear-gradient(to left, transparent 50%, #000000 50%);
@@ -1465,26 +848,9 @@
 }
 .form-label__input:disabled + .form-label__input-custom--radio, .form-label__input:disabled + .form-label__input-custom--checkbox {
   border-color: rgba(68, 68, 68, 0.3);
+  cursor: not-allowed;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .form-label__input-field {
   display: inline-block;
   box-sizing: border-box;
@@ -1499,22 +865,31 @@
   border-bottom: 2px solid #63d1bb;
   outline: none;
 }
-.form-label__input-field[type=text]::-webkit-input-placeholder {
+.form-label__input-field:disabled, .form-label__input-field:disabled:hover {
+  border-bottom: 2px solid #000000;
+  cursor: not-allowed;
+}
+.form-label__input-field--text::placeholder {
   color: rgba(68, 68, 68, 0.3);
   font-weight: 400;
   font-size: 17px;
   line-height: 24px;
 }
-.form-label__input-field--textarea {
+
+.form-label__input-textarea {
   font-family: "Opensans", "PT Sans", sans-serif;
   border: 2px solid #000000;
   padding: 15px;
 }
-.form-label__input-field--textarea:hover, .form-label__input-field--textarea:focus, .form-label__input-field--textarea:focus-visible {
+.form-label__input-textarea:hover, .form-label__input-textarea:focus, .form-label__input-textarea:focus-visible {
   border: 2px solid #63d1bb;
   outline: none;
 }
-.form-label__input-field--textarea::-webkit-input-placeholder {
+.form-label__input-textarea:disabled, .form-label__input-textarea:disabled:hover {
+  border-bottom: 2px solid #000000;
+  cursor: not-allowed;
+}
+.form-label__input-textarea::placeholder {
   color: rgba(68, 68, 68, 0.3);
   font-family: "Opensans", "PT Sans", sans-serif;
   font-weight: 400;
@@ -1522,51 +897,28 @@
   line-height: 24px;
 }
 
-.main-container__products {
+.button-disclaimer-wrapper__disclaimer {
   margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444444;
+  padding-bottom: 18px;
 }
 
-.products__products-wrapper {
-  display: flex;
-  padding: 30px;
-}
-
-.products-wrapper__product-list {
+.products__product-list {
   display: grid;
-  margin: 0;
-  padding: 0;
+  padding: 30px;
   gap: 30px;
   list-style: none;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-.product-list__product-list-item {
+.product-list__product-card {
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
 }
 
-.product-list-item__product-card {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.product-card__info {
+.product-card__product-info {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -1574,21 +926,21 @@
   border: 1px solid rgba(68, 68, 68, 0.2);
 }
 
-.product-card__name {
+.product-info__name {
   margin: 0;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
 }
 
-.product-card__description {
+.product-info__description {
   margin: 0;
   font-weight: 400;
   font-size: 13px;
   line-height: 30px;
   color: #444444;
 }
-.product-card__description::after {
+.product-info__description::after {
   position: relative;
   display: flex;
   height: 1px;
@@ -1597,14 +949,14 @@
   content: "";
 }
 
-.product-card__price-wrapper {
+.product-info__price-wrapper {
   display: flex;
   padding-top: 22px;
   justify-content: space-between;
   align-items: center;
 }
 
-.product-card__price {
+.price-wrapper__price {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -1612,7 +964,7 @@
   margin: auto 0;
 }
 
-.product-card__cart-button {
+.price-wrapper__cart-button {
   display: inline-block;
   box-sizing: border-box;
   background-color: #ffffff;
@@ -1621,55 +973,49 @@
   fill: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.product-card__cart-button:hover {
+.price-wrapper__cart-button:hover {
   fill: #63d1bb;
 }
-.product-card__cart-button:disabled {
+.price-wrapper__cart-button:disabled {
   fill: rgba(99, 209, 187, 0.3);
   cursor: not-allowed;
 }
 
-.catalog__our-production {
+.our-production__our-production-wrapper {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  padding: 0 30px 58px;
+  padding: 0 30px;
+  align-content: center;
+  justify-content: center;
 }
 
-.our-production__our-production-wrapper {
+.our-production-wrapper__video-block {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid rgba(68, 68, 68, 0.2);
   padding: 34px;
+  align-content: center;
+  justify-content: center;
 }
 
-/*backgrounds*/
-/*fonts*/
-/*borders*/
-/*icons*/
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/opensans.woff") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Opensans";
-  font-style: normal;
+.video-block__video-title {
+  color: #000000;
   font-weight: 700;
-  src: url("/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
+  font-size: 19px;
+  line-height: 24px;
 }
-.our-production-wrapper__video-description {
+
+.video-block__video-description {
   font-size: 13px;
   line-height: 24px;
   color: #444444;
 }
 
-.our-production-wrapper__video-wrapper {
+.video-block__video-wrapper {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -34px;
 }
 
 .video-wrapper__video-button {
