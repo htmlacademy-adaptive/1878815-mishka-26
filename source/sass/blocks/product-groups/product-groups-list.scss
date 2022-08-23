@@ -1,7 +1,19 @@
-.product-groups__product-groups-list {
-  display: grid;
-  grid-template-columns: max-content;
-  margin: 0;
+.product-groups-list__product-groups-list-item {
   padding: 0;
-  list-style: none;
+
+  &:nth-child(even) {
+    background-color: $hightlight-background-additional;
+
+    &:hover {
+      background-color: lighten(saturate($hightlight-background-additional, 4%), 1%);
+    }
+  }
+
+  &:nth-child(odd) {
+    background-color: $hightlight-background;
+
+    &:hover {
+      background-color: lighten(desaturate($hightlight-background, 2%), 1%);
+    }
+  }
 }

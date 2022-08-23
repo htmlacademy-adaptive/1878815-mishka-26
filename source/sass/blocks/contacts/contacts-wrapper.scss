@@ -1,7 +1,10 @@
-.contacts__contacts-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px 30px;
+.contacts-wrapper__contacts-list {
+  flex-grow: 1;
+  margin: 0;
+  padding: 7px 0;
+  color: $secondary-font;
+
+  @include text;
 }
 
 .contacts-wrapper__header {

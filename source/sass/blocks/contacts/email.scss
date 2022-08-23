@@ -1,0 +1,18 @@
+.email {
+  position: relative;
+  color: $secondary-font;
+  border-bottom: 1px solid $hightlight-border;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-font-additional;
+    border-bottom: 1px solid $hightlight-border-additional;
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    color: $accent-font-additional;
+    border-bottom: 1px solid rgba($hightlight-border-additional, 0.1);
+    cursor: not-allowed;
+  }
+}

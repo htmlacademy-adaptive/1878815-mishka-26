@@ -1,15 +1,7 @@
-.order-popup__popup-form {
-  position: relative;
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-  width: 320px;
-  margin: auto;
-  padding: 28.5px 30px 46px;
-  background-color: $primary-background;
-  border: 1px solid $light-border;
-  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
-  align-content: center;
+.popup-form__popup-form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .popup-form__popup-form-title {

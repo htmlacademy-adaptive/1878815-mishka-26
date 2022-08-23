@@ -1,6 +1,8 @@
-.feedback-wrapper__feedback-list {
-  display: flex;
-  list-style: none;
+.feedback-list__feedback-list-item {
+  display: none;
   padding: 0;
-  margin: 0;
+
+  &--current {
+    display: flex;
+  }
 }

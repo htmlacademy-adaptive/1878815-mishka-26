@@ -1,10 +1,7 @@
-.our-production-wrapper__video-block {
+.video-block__video-wrapper {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid rgba($dark-border, 0.2);
-  padding: 34px;
-  align-content: center;
-  justify-content: center;
 }
 
 .video-block__video-title {

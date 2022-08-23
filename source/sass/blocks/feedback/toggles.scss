@@ -1,5 +1,18 @@
-.feedback__toggles {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 32px;
+.toggles__toggle {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 13px 42px 13px 38px;
+  background: $primary-background;
+  border: 1px solid rgba($light-border, 0.4);
+  cursor: pointer;
+  fill: $primary-icon;
+
+  &:hover {
+    fill: rgba($primary-icon, 0.6);
+  }
+
+  &:disabled {
+    fill: rgba($primary-icon, 0.3);
+    cursor: not-allowed;
+  }
 }

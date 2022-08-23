@@ -8,10 +8,3 @@
     background-image: url("../img/backgrounds/hero-mobile.jpg");
   }
 }
-
-.hero-wrapper__header {
-  @include huge-header;
-
-  margin: 0;
-  text-align: center;
-}

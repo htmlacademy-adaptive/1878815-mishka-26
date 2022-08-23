@@ -1,19 +1,18 @@
-.product-groups-list__product-groups-list-item {
-  padding: 0;
+.product-groups-list-item__product-link {
+  display: grid;
+  padding: 21px 27px 22px 30px;
+  grid-template-columns: 130px 60px;
+  gap: 73px;
+  text-decoration: none;
+  fill: rgba($hightlight-icon, 0.5);
 
-  &:nth-child(even) {
-    background-color: $hightlight-background-additional;
-
-    &:hover {
-      background-color: lighten(saturate($hightlight-background-additional, 4%), 1%);
-    }
+  &:hover {
+    fill: rgba($hightlight-icon, 0.7);
   }
 
-  &:nth-child(odd) {
-    background-color: $hightlight-background;
-
-    &:hover {
-      background-color: lighten(desaturate($hightlight-background, 2%), 1%);
-    }
+  &--disabled,
+  &--disabled:hover {
+    fill: rgba($hightlight-icon, 0.3);
+    cursor: not-allowed;
   }
 }

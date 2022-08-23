@@ -1,8 +1,13 @@
-.page__footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 25px 30px 23px;
-  background-color: $secondary-background;
+.footer__made {
+  display: flex;
   align-items: center;
   justify-items: center;
+}
+
+.footer__social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid rgba($light-border, 0.4);
 }
