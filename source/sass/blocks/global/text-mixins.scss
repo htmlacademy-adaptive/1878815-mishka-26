@@ -26,6 +26,12 @@
   line-height: 24px;
 }
 
+@mixin medium-header-tablet {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
 @mixin small-header {
   font-weight: 700;
   font-size: 17px;

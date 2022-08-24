@@ -1,8 +1,9 @@
 .product-groups-list-item__product-link {
-  display: grid;
-  padding: 21px 27px 22px 30px;
-  grid-template-columns: 130px 60px;
-  gap: 73px;
+  display: flex;
+  padding: 21px 27px 30px;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
   text-decoration: none;
   fill: rgba($hightlight-icon, 0.5);
 
@@ -19,9 +20,6 @@
 
 @media (min-width: $tablet-width) {
   .product-groups-list-item__product-link {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: space-between;
+    padding: 30px 33px 27px 36px;
   }
 }

@@ -9,3 +9,9 @@
   justify-self: center;
   align-self: center;
 }
+
+@media (min-width: $tablet-width) {
+  .product-link__title {
+    @include medium-header-tablet;
+  }
+}

@@ -13,6 +13,26 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    bottom: -100%;
+    bottom: 100%;
+  }
+}
+
+.product-groups__separator {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .product-groups__separator {
+    position: relative;
+    display: flex;
+    height: 24px;
+    margin: 0;
+    flex-grow: 1;
+    background-image: url("../img/backgrounds/zigzag-fill.svg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: repeat-x;
+    border: none;
+    transform: translateY(-100%);
   }
 }
