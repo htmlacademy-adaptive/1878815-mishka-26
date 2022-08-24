@@ -1,7 +1,22 @@
 .highlight__highlight-wrapper {
   display: flex;
+  flex-direction: column;
   padding: 30px 31px 30px;
   flex-wrap: wrap;
   justify-content: center;
   height: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .highlight__highlight-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .highlight__highlight-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }

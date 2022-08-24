@@ -19,6 +19,20 @@
   justify-content: center;
 }
 
+.main-container__highlight {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: $desktop-width) {
+  .main-container__highlight {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 .main-container__separator {
   display: flex;
   flex-grow: 1;
@@ -29,4 +43,12 @@
   background-size: contain;
   background-position: center center;
   background-repeat: repeat-x;
+}
+
+@media (min-width: $desktop-width) {
+  .main-container__separator {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }

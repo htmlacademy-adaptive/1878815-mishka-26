@@ -1,8 +1,22 @@
 .highlight-header__title {
+  display: flex;
   margin: 0;
   color: $primary-font;
+  align-self: center;
 
   @include big-header;
+}
+
+@media (min-width: $tablet-width) {
+  .highlight-header__title {
+    @include huge-header-tablet;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .highlight-header__title {
+    @include huge-header-desktop;
+  }
 }
 
 .highlight-header__marker {
@@ -12,4 +26,18 @@
   color: $accent-font;
 
   @include small-header;
+}
+
+@media (min-width: $tablet-width) {
+  .highlight-header__marker {
+    text-align: center;
+    max-width: 100px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .highlight-header__marker {
+    justify-self: left;
+    align-self: center;
+  }
 }
