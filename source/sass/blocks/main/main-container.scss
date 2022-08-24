@@ -7,6 +7,13 @@
   padding-bottom: 39px;
 }
 
+.main-container__hero {
+  display: flex;
+  justify-content: center;
+  background-color: $secondary-background;
+}
+
+
 .main-container__separator {
   display: flex;
   flex-grow: 1;

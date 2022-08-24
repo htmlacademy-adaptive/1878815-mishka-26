@@ -4,6 +4,16 @@
   line-height: 30px;
 }
 
+@mixin huge-header-tablet {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin huge-header-desktop {
+  font-size: 53px;
+  line-height: 57px;
+}
+
 @mixin big-header {
   font-weight: 700;
   font-size: 25px;

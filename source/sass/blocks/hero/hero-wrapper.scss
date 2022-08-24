@@ -4,3 +4,15 @@
   margin: 0;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .hero-wrapper__header {
+    @include huge-header-tablet;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero-wrapper__header {
+    @include huge-header-desktop;
+  }
+}

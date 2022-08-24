@@ -1,12 +1,35 @@
 .hero__hero-wrapper {
-  background-color: $secondary-background;
+  display: inline-flex;
+  box-sizing: border-box;
   height: 100%;
   padding: 73px 23px;
+  justify-content: center;
 
   &--index {
-    padding-bottom: 120px;
+    min-height: 283px;
     background-image: url("../img/backgrounds/hero-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .hero__hero-wrapper {
+    padding: 100px 100px 75px;
+
+    &--index {
+      min-height: 758px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero__hero-wrapper {
+    padding: 100px 100px 95px;
+
+    &--index {
+      min-height: 763px;
+    }
   }
 }
