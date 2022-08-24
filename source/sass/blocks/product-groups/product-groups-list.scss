@@ -1,5 +1,7 @@
 .product-groups-list__product-groups-list-item {
+  display: flex;
   padding: 0;
+  justify-content: center;
 
   &:nth-child(even) {
     background-color: $hightlight-background-additional;
@@ -15,5 +17,11 @@
     &:hover {
       background-color: lighten(desaturate($hightlight-background, 2%), 1%);
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-groups-list__product-groups-list-item {
+    min-width: calc(50% - 50px);
   }
 }

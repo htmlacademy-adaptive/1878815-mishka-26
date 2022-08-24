@@ -13,6 +13,11 @@
   background-color: $secondary-background;
 }
 
+.main-container__product-groups {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 
 .main-container__separator {
   display: flex;
