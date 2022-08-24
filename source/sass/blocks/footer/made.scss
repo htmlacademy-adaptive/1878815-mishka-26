@@ -1,0 +1,25 @@
+.made__text {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.made__link {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 15px;
+  align-items: center;
+  justify-items: center;
+  fill: $accent-icon;
+
+  &:hover {
+    fill: $hightlight-icon;
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    fill: $hightlight-icon;
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}

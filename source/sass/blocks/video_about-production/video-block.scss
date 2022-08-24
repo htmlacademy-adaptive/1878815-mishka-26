@@ -1,0 +1,17 @@
+.video-block__video-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-block__video-title {
+  color: $primary-font;
+
+  @include medium-header;
+}
+
+.video-block__video-description {
+  font-size: 13px;
+  line-height: 24px;
+  color: $secondary-font;
+}

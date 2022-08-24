@@ -1,0 +1,23 @@
+.order-form-fieldset__field-title {
+  padding-right: 20px;
+  text-transform: uppercase;
+  color: $accent-font;
+
+  @include small-header;
+}
+
+.order-form-fieldset__form-label {
+  display: grid;
+  padding: 10px 0;
+  grid-template-columns: 42px 1fr;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+
+  &--name,
+  &--contact,
+  &--comment {
+    grid-template-columns: 1fr;
+    cursor: auto;
+  }
+}

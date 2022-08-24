@@ -1,0 +1,20 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 39px;
+}
+
+.main-container__separator {
+  display: flex;
+  flex-grow: 1;
+  height: 6px;
+  margin: 0;
+  border: none;
+  background-image: url("../img/backgrounds/zigzag-line.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: repeat-x;
+}

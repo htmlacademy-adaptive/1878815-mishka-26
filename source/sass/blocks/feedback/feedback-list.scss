@@ -1,0 +1,8 @@
+.feedback-list__feedback-list-item {
+  display: none;
+  padding: 0;
+
+  &--current {
+    display: flex;
+  }
+}

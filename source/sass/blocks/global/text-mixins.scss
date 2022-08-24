@@ -1,0 +1,53 @@
+@mixin huge-header {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+@mixin big-header {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+@mixin medium-header {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+@mixin small-header {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+@mixin big-text {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+@mixin big-text-bold {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+@mixin text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+@mixin text-bold {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+@mixin text-small {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}

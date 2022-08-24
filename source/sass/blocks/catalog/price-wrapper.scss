@@ -1,0 +1,24 @@
+.price-wrapper__price {
+  @include text-small;
+  font-weight: 700;
+  margin: auto 0;
+}
+
+.price-wrapper__cart-button {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: $primary-background;
+  border: none;
+  padding: 2px;
+  fill: rgba($primary-icon, 0.2);
+  cursor: pointer;
+
+  &:hover {
+    fill: $accent-icon;
+  }
+
+  &:disabled {
+    fill: rgba($accent-icon, 0.3);
+    cursor: not-allowed;
+  }
+}

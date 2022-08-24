@@ -1,0 +1,21 @@
+.highlight-wrapper__highlight-header {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.highlight-wrapper__product-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.highlight-wrapper__image {
+  padding: 20px 0;
+}
+
+.highlight-wrapper__price-wrapper {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}

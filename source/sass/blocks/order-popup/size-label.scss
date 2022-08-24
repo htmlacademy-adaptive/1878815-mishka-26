@@ -1,0 +1,28 @@
+.size-label__button {
+  display: inline-block;
+  box-sizing: border-box;
+  justify-content: center;
+  align-content: center;
+  padding: 13px 33px;
+  border: 2px solid rgba($light-border, 0.3);
+  color: $secondary-font;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @include big-text-bold;
+
+  &:hover {
+    border: 2px solid $light-border;
+  }
+
+  .size-label__size-input:checked + & {
+    border: 2px solid $hightlight-border;
+  }
+
+  .size-label__size-input:disabled + & {
+    background-color: $dark-background;
+    border: 2px solid $dark-border;
+    color: rgba($hightlight-font, 0.3);
+    cursor: not-allowed;
+  }
+}

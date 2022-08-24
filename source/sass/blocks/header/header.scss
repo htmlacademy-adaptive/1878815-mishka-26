@@ -1,0 +1,38 @@
+.header {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 79px;
+  width: 100%;
+  padding: 10px 22px;
+  border-top: 1px solid rgba($light-border, 0.4);
+  border-bottom: 1px solid rgba($light-border, 0.4);
+}
+
+.header__logo {
+  height: 35px;
+  width: 86px;
+  margin: auto;
+  padding: 10px;
+  align-content: center;
+  justify-content: center;
+  grid-column: 2 / -2;
+}
+
+.header__navigation {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1;
+  top: 65px;
+  right: -22px;
+  border-top: 1px solid rgba($light-border, 0.4);
+  align-content: center;
+  background-color: $primary-background;
+
+  &--closed {
+    display: none;
+  }
+}

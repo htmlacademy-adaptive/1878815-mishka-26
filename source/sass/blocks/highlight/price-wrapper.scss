@@ -1,0 +1,6 @@
+.price-wrapper__price {
+  padding: 8px 0 20px;
+  color: $secondary-font;
+
+  @include small-header;
+}

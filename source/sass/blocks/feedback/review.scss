@@ -1,0 +1,11 @@
+.review__text {
+  margin: 0;
+  padding: 15px 0;
+  color: $secondary-font;
+
+  @include text;
+}
+
+.review__author {
+  padding: 16px 0;
+}
