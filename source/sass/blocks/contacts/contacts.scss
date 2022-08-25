@@ -1,5 +1,18 @@
 .contacts__contacts-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 20px 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__contacts-wrapper {
+    padding: 20px 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__contacts-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }

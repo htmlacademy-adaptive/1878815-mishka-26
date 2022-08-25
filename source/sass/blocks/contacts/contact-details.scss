@@ -3,7 +3,19 @@
   margin: 0;
 }
 
+@media (min-width: $tablet-width) {
+  .contact-details__name {
+    display: block;
+  }
+}
+
 .contact-details__value {
   display: flex;
   margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .contact-details__value {
+    display: block;
+  }
 }

@@ -4,4 +4,11 @@
   margin: 0;
   padding: 5px 0 10px;
   justify-content: space-between;
+  font-style: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-list__contact-details {
+    width: 50%;
+  }
 }
