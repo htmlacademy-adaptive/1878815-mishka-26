@@ -1,3 +1,29 @@
+.footer__link {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__link {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 15px;
+    align-items: center;
+    justify-items: center;
+    fill: $primary-icon;
+
+    &:hover {
+      fill: $hightlight-icon;
+    }
+
+    &--disabled,
+    &--disabled:hover {
+      fill: $hightlight-icon;
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+}
+
 .footer__made {
   display: flex;
   align-items: center;
@@ -10,4 +36,10 @@
   padding: 0;
   list-style: none;
   border-bottom: 1px solid rgba($light-border, 0.4);
+}
+
+@media (min-width: $tablet-width) {
+  .footer__social {
+    border: none;
+  }
 }
