@@ -2,12 +2,22 @@
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  padding: 45px 30px 45px;
+  padding: 45px 30px;
 }
 
-.feedback__buttons {
-  display: flex;
-  padding: 10px 0;
-  flex-wrap: wrap;
-  justify-content: center;
+@media (min-width: $tablet-width) {
+  .feedback__feedback-wrapper {
+    position: relative;
+    padding: 45px 50px;
+    background-image: url("../img/backgrounds/review.jpg");
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__feedback-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }

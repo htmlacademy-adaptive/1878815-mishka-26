@@ -26,8 +26,14 @@
   justify-content: center;
 }
 
+@media (min-width: $desktop-width) {
+  .main-container__highlight {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 .main-container__advantages {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -40,8 +46,20 @@
   }
 }
 
+.main-container__feedback {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: $tablet-width) {
+  .main-container__feedback {
+    padding-bottom: 60px;
+  }
+}
+
 @media (min-width: $desktop-width) {
-  .main-container__highlight {
+  .main-container__feedback {
     padding-left: 50px;
     padding-right: 50px;
   }
