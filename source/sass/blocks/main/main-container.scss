@@ -90,3 +90,15 @@
     margin-right: 50px;
   }
 }
+
+.main-container__form-container {
+  display: flex;
+  justify-content: center;
+  padding: 17px 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-container__order-wrapper {
+    padding: 17px 50px;
+  }
+}

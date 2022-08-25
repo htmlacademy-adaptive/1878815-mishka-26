@@ -6,18 +6,41 @@
   @include small-header;
 }
 
-.order-form-fieldset__form-label {
-  display: grid;
-  padding: 10px 0;
-  grid-template-columns: 42px 1fr;
-  gap: 20px;
-  align-items: center;
-  cursor: pointer;
+@media (min-width: $tablet-width) {
+  .order-form-fieldset__field-title {
+    position: absolute;
+    display: block;
+    grid-column: 1 / 2;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    align-self: center;
+  }
+}
 
-  &--name,
-  &--contact,
-  &--comment {
-    grid-template-columns: 1fr;
-    cursor: auto;
+@media (min-width: $desktop-width) {
+  .order-form-fieldset__field-title {
+    justify-self: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .order-form-fieldset__label-wrapper {
+    grid-column: 2 / -1;
+
+    &--checkbox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order-form-fieldset__label-wrapper {
+    grid-column: 2 / -2;
+
+    &--checkbox {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }

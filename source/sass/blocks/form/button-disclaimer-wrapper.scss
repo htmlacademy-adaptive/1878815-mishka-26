@@ -5,3 +5,32 @@
   color: $secondary-font;
   padding-bottom: 18px;
 }
+
+@media (min-width: $tablet-width) {
+  .button-disclaimer-wrapper__disclaimer {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button-disclaimer-wrapper__disclaimer {
+    grid-column: 4 / 6;
+    grid-row: 1/2;
+    justify-self: left;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button-disclaimer-wrapper__button {
+    margin-right: auto;
+    max-width: 30%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button-disclaimer-wrapper__button {
+    max-width: none;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+  }
+}

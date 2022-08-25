@@ -1,0 +1,24 @@
+.fieldset-wrapper__order-form-fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  border: none;
+  border-top: 1px solid $hightlight-border;
+}
+
+@media (min-width: $tablet-width) {
+  .fieldset-wrapper__order-form-fieldset {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    border: none;
+    justify-content: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fieldset-wrapper__order-form-fieldset {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}

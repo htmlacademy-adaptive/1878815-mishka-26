@@ -1,0 +1,20 @@
+.label-wrapper__form-label {
+  display: grid;
+  padding: 10px 0;
+  grid-template-columns: 42px 1fr;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+
+  &--name,
+  &--contact,
+  &--comment {
+    grid-template-columns: 1fr;
+    cursor: auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .label-wrapper__form-label {
+  }
+}
