@@ -4,3 +4,9 @@
   flex-direction: column;
   padding: 0 30px;
 }
+
+@media (min-width: $tablet-width) {
+  .advantages__advantages-wrapper {
+    padding: 0 50px;
+  }
+}
