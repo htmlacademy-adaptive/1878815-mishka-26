@@ -1,17 +1,17 @@
-.product-info__price-wrapper {
+.product-card-info__price-cart-wrapper {
   display: flex;
   padding-top: 22px;
   justify-content: space-between;
   align-items: center;
 }
 
-.product-info__name {
+.product-card-info__name {
   margin: 0;
 
   @include big-text-bold;
 }
 
-.product-info__description {
+.product-card-info__description {
   margin: 0;
   font-weight: 400;
   font-size: 13px;

@@ -3,4 +3,18 @@
   padding: 30px;
   gap: 30px;
   list-style: none;
+  align-content: center;
+}
+
+@media (min-width: $tablet-width) {
+  .products__product-list {
+    gap: 54px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .products__product-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 51px;
+  }
 }

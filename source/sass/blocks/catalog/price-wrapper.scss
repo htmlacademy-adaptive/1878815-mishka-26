@@ -1,13 +1,13 @@
-.price-wrapper__price {
+.price-cart-wrapper__price {
   @include text-small;
   font-weight: 700;
   margin: auto 0;
 }
 
-.price-wrapper__cart-button {
+.price-cart-wrapper__cart {
   display: inline-block;
   box-sizing: border-box;
-  background-color: $primary-background;
+  background-color: transparent;
   border: none;
   padding: 2px;
   fill: rgba($primary-icon, 0.2);

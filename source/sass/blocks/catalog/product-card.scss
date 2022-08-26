@@ -1,7 +1,10 @@
-.product-card__product-info {
+.product-card__product-card-info {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   padding: 30px;
-  border: 1px solid rgba($dark-border, 0.2);
+}
+
+.product-card__product-image {
+  margin: auto;
 }
