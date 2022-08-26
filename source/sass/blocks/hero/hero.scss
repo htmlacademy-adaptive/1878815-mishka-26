@@ -33,3 +33,27 @@
     }
   }
 }
+
+.hero__separator {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__separator {
+    content: "";
+    width: 100%;
+    position: absolute;
+    display: flex;
+    height: 24px;
+    margin: 0;
+    flex-grow: 1;
+    background-image: url(../img/backgrounds/zigzag-fill.svg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: repeat-x;
+    border: none;
+    transform: translateY(50%);
+    z-index: 1;
+    bottom: 0;
+  }
+}

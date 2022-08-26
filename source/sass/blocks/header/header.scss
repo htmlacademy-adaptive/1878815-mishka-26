@@ -24,6 +24,7 @@
   min-width: 100%;
   top: 15%;
   flex-direction: column;
+  z-index: 1;
 }
 
 @media (min-width: $tablet-width) {

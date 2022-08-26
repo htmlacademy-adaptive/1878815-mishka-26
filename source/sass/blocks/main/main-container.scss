@@ -8,6 +8,7 @@
 }
 
 .main-container__hero {
+  position: relative;
   display: flex;
   justify-content: center;
   background-color: $secondary-background;
