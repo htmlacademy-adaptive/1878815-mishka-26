@@ -1,8 +1,23 @@
 .our-production-wrapper__video-block {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   border: 1px solid rgba($dark-border, 0.2);
   padding: 34px;
   align-content: center;
   justify-content: center;
+}
+
+@media (min-width: $desktop-width) {
+  .our-production-wrapper__video-block {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .our-production-wrapper__video-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }

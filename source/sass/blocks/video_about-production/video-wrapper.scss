@@ -2,8 +2,9 @@
   position: absolute;
   border: none;
   background-color: transparent;
-  left: 28%;
-  top: 25%;
+  left: calc(50% - 51px);
+  top: 0;
+  bottom: 0;
   cursor: pointer;
 
   &:disabled {
