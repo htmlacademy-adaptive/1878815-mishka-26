@@ -5,71 +5,9 @@
   justify-content: center;
   align-content: center;
   padding-bottom: 39px;
-}
-
-.main-container__hero {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  background-color: $secondary-background;
-}
-
-.main-container__product-groups {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.main-container__highlight {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-@media (min-width: $desktop-width) {
-  .main-container__highlight {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-.main-container__advantages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-@media (min-width: $desktop-width) {
-  .main-container__advantages {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-.main-container__feedback {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-@media (min-width: $tablet-width) {
-  .main-container__feedback {
-    padding-bottom: 60px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-container__feedback {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-.main-container__contacts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-container__separator {
@@ -82,10 +20,8 @@
   background-size: contain;
   background-position: center center;
   background-repeat: repeat-x;
-}
 
-@media (min-width: $desktop-width) {
-  .main-container__separator {
+  @media (min-width: $desktop-width) {
     width: calc(100% - 100px);
     margin-left: 50px;
     margin-right: 50px;

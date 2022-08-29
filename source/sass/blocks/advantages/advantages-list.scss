@@ -1,4 +1,17 @@
-.advantages-list__advantages-list-item {
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.advantages-list__list-item {
   position: relative;
   padding: 20px 0;
 
@@ -35,4 +48,10 @@
   &--gift::before {
     background-image: url("../img/icons/icon-gift.svg");
   }
+}
+
+.advantages-list__header {
+  color: $primary-font;
+
+  @include small-header;
 }

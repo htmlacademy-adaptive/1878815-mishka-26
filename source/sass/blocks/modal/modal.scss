@@ -1,0 +1,15 @@
+.modal {
+  display: none;
+
+  &--opened {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: rgba($primary-background, 0.9);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}

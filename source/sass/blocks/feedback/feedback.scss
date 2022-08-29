@@ -1,23 +1,111 @@
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 60px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 .feedback__feedback-wrapper {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
   padding: 45px 30px;
-}
 
-@media (min-width: $tablet-width) {
-  .feedback__feedback-wrapper {
+  @media (min-width: $tablet-width) {
     position: relative;
     padding: 45px 50px;
     background-image: url("../img/backgrounds/review.jpg");
     background-position: left center;
     background-repeat: no-repeat;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .feedback__feedback-wrapper {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.feedback__feedback-title {
+  @include big-header;
+
+  color: $primary-font;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    justify-self: left;
+  }
+}
+
+.feedback__feedback-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / -2;
+    justify-self: left;
+  }
+}
+
+.feedback__list-item {
+  display: none;
+  padding: 0;
+
+  &--current {
+    display: flex;
+  }
+}
+
+
+.feedback__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  margin: auto;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    height: calc(100% - 45px);
+    right: 50px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: -2 / -1;
+  }
+}
+
+.feedback__toggles {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 32px;
+}
+
+.feedback__toggle {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 13px 42px 13px 38px;
+  background: $primary-background;
+  border: 1px solid rgba($light-border, 0.4);
+  cursor: pointer;
+  fill: $primary-icon;
+
+  &:hover {
+    fill: rgba($primary-icon, 0.6);
+  }
+
+  &:active {
+    fill: rgba($primary-icon, 0.3);
   }
 }

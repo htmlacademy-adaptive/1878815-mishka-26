@@ -1,12 +1,27 @@
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 .advantages__advantages-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 0 30px;
-}
 
-@media (min-width: $tablet-width) {
-  .advantages__advantages-wrapper {
+  @media (min-width: $tablet-width) {
     padding: 0 50px;
   }
+}
+
+.advantages__advantages-header {
+  color: $primary-font;
+
+  @include big-header;
 }

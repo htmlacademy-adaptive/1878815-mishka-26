@@ -1,3 +1,10 @@
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: $secondary-background;
+}
+
 .hero__hero-wrapper {
   display: inline-flex;
   box-sizing: border-box;
@@ -12,20 +19,16 @@
     background-position: center;
     background-size: cover;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .hero__hero-wrapper {
+  @media (min-width: $tablet-width) {
     padding: 100px 100px 75px;
 
     &--index {
       min-height: 758px;
     }
   }
-}
 
-@media (min-width: $desktop-width) {
-  .hero__hero-wrapper {
+  @media (min-width: $desktop-width) {
     padding: 100px 100px 95px;
 
     &--index {
@@ -34,12 +37,25 @@
   }
 }
 
-.hero__separator {
-  display: none;
+.hero__header {
+  @include huge-header;
+
+  margin: 0;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include huge-header-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include huge-header-desktop;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .hero__separator {
+.hero__separator {
+  display: none;
+
+  @media (min-width: $tablet-width) {
     content: "";
     width: 100%;
     position: absolute;

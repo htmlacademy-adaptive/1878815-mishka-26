@@ -14,31 +14,15 @@
   text-decoration: none;
   cursor: pointer;
 
-  &:hover,
-  &:focus,
-  &:focus-visible {
+  &:hover {
     background-color: $dark-background;
     border: 2px solid $dark-border;
     color: $hightlight-font;
   }
 
-  &:disabled {
+  &:active {
     background-color: $dark-background;
     border: 2px solid $dark-border;
     color: rgba($hightlight-font, 0.3);
-    cursor: not-allowed;
-  }
-
-  &--disabled {
-    background-color: $dark-background;
-    border: 2px solid $dark-border;
-    color: rgba($hightlight-font, 0.3);
-    cursor: not-allowed;
-  }
-
-  &--disabled:hover {
-    background-color: $dark-background;
-    color: rgba($hightlight-font, 0.3);
-    cursor: not-allowed;
   }
 }
