@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 17px 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 50px;
+  }
+}

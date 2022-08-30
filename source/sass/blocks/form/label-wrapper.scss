@@ -1,3 +1,20 @@
+.label-wrapper {
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / -1;
+
+    &--checkbox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--checkbox {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
 .label-wrapper__form-label {
   display: grid;
   padding: 10px 0;
@@ -11,5 +28,127 @@
   &--comment {
     grid-template-columns: 1fr;
     cursor: auto;
+  }
+}
+
+.label-wrapper__input-caption {
+  @include small-header;
+
+  &--name {
+    padding: 10px 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include small-header-tablet;
+  }
+}
+
+
+.label-wrapper__input-custom {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  border: 2px solid $dark-border;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border-color: $hightlight-border;
+  }
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  .label-wrapper__input--radio:checked + &--radio::after {
+    position: absolute;
+    top: 23%;
+    left: 25%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $accent-icon;
+    content: "";
+  }
+
+  .label-wrapper__input--checkbox:checked + &--checkbox::before,
+  .label-wrapper__input--checkbox:checked + &--checkbox::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 25%;
+    width: 23px;
+    height: 2px;
+    background-color: $primary-icon;
+    transform: rotate(135deg);
+    content: "";
+  }
+
+  .label-wrapper__input--checkbox:checked + &--checkbox::after {
+    top: 50%;
+    left: -19%;
+    background: linear-gradient(to left, transparent 50%, $primary-icon 50%);
+    transform: rotate(-135deg);
+  }
+
+  .label-wrapper__input:active + &--radio,
+  .label-wrapper__input:active + &--checkbox {
+    border-color: rgba($dark-border, 0.3);
+  }
+}
+
+.label-wrapper__input-field {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 18px 0;
+  border: none;
+  border-bottom: 2px solid $super-dark-border;
+  font-size: 19px;
+  line-height: 18px;
+  color: #000000;
+  background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border-bottom: 2px solid $hightlight-border;
+    outline: none;
+  }
+
+  &:active {
+    border-bottom: 2px solid $super-dark-border;
+  }
+
+  &--text::placeholder {
+    color: rgba($secondary-font, 0.3);
+
+    @include big-text;
+  }
+}
+
+.label-wrapper__input-textarea {
+  font-family: $basic-font-family;
+  padding: 15px;
+  border: 2px solid $super-dark-border;
+  background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border: 2px solid $hightlight-border;
+    outline: none;
+  }
+
+  &:active {
+    border-bottom: 2px solid $super-dark-border;
+  }
+
+  &::placeholder {
+    color: rgba($secondary-font, 0.3);
+    font-family: $basic-font-family;
+
+    @include big-text;
   }
 }

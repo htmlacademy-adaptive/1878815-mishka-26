@@ -1,0 +1,43 @@
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  border: none;
+  border-top: 1px solid $hightlight-border;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    border: none;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column: 2 / -2;
+  }
+}
+
+.fieldset__field-legend {
+  padding-right: 20px;
+  text-transform: uppercase;
+  color: $accent-font;
+
+  @include small-header;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    display: block;
+    grid-column: 1 / 2;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-self: center;
+  }
+}
