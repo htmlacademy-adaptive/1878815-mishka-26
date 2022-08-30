@@ -1,8 +1,24 @@
-.our-production__our-production-wrapper {
+.our-production {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0 30px;
+  padding: 30px;
   align-content: center;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px;
+  }
+}
+
+.our-production__content-block {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba($dark-border, 0.2);
+  padding: 34px;
+  align-content: center;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 42px;
+  }
 }

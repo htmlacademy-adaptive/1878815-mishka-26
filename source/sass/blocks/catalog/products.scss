@@ -1,19 +1,25 @@
-.products__product-list {
-  display: grid;
+.products {
+  display: flex;
   padding: 30px;
-  gap: 30px;
-  list-style: none;
-  align-content: center;
-}
 
-@media (min-width: $tablet-width) {
-  .products__product-list {
-    gap: 54px;
+  @media (min-width: $tablet-width) {
+    padding: 50px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .products__product-list {
+.products__product-list {
+  display: grid;
+  min-width: 100%;
+  padding: 0;
+  gap: 30px;
+  list-style: none;
+  justify-items: center;
+
+  @media (min-width: $tablet-width) {
+    gap: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 51px;
   }
