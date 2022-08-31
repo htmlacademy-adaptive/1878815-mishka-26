@@ -1,29 +1,31 @@
 .highlight {
-  position: relative;
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
-}
+  padding-top: 35px;
+  padding-bottom: 36px;
 
-@media (min-width: $desktop-width) {
-  .highlight {
-    padding-left: 50px;
-    padding-right: 50px;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    grid-column: 1 / -1;
+    padding-top: 35px;
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 120px;
+    padding-bottom: 73px;
   }
 }
 
 .highlight__highlight-wrapper {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  padding: 30px 31px 30px;
   flex-wrap: wrap;
   justify-content: center;
   height: 100%;
-
-  @media (min-width: $tablet-width) {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 
   @media (min-width: $desktop-width) {
     display: grid;

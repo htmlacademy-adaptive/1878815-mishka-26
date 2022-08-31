@@ -1,9 +1,16 @@
 .products {
   display: flex;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 50px;
+    grid-column: 1 / -1;
+    padding-top: 67px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 111px;
   }
 }
 

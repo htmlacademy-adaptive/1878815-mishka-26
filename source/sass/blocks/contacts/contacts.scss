@@ -1,21 +1,20 @@
 .contacts {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contacts__contacts-wrapper {
-  display: flex;
   flex-direction: column;
-  padding: 20px 30px;
+  padding-top: 38px;
+  padding-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    padding: 20px 50px;
+    grid-column: 1 / -1;
+    padding-top: 46px;
+    padding-bottom: 57px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-top: 71px;
+    padding-bottom: 105px;
   }
 }
 
@@ -71,8 +70,13 @@
 .contacts__contact-button {
   margin: auto;
 
+  @media (min-width: $tablet-width) {
+    width: fit-content;
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: 2 / 4;
-    justify-self: start;
+    align-self: end;
+    margin: 0;
   }
 }

@@ -2,15 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 45px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 60px;
+    grid-column: 1 / -1;
+    padding-top: 42px;
+    padding-bottom: 68px;
   }
 
-
   @media (min-width: $desktop-width) {
-    padding-left: 50px;
-    padding-right: 50px;
+    display: grid;
   }
 }
 
@@ -18,11 +19,9 @@
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  padding: 45px 30px;
 
   @media (min-width: $tablet-width) {
     position: relative;
-    padding: 45px 50px;
     background-image: url("../img/backgrounds/review.jpg");
     background-position: left center;
     background-repeat: no-repeat;
@@ -70,13 +69,12 @@
 .feedback__buttons-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
   margin: auto;
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    height: calc(100% - 45px);
-    right: 50px;
+    height: 100%;
+    right: 0;
     flex-direction: column-reverse;
     justify-content: space-between;
   }
@@ -89,7 +87,6 @@
 .feedback__toggles {
   display: flex;
   justify-content: center;
-  padding-bottom: 32px;
 }
 
 .feedback__toggle {

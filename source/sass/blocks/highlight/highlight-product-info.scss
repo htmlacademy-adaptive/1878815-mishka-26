@@ -1,15 +1,19 @@
 .highlight-product-info {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
     position: relative;
     flex-wrap: wrap;
     width: 50%;
+    padding-right: 42px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2 / -1;
+    grid-column: 2 / -4;
+    width: 100%;
+    padding-right: 58px;
   }
 }
 
@@ -62,7 +66,8 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    min-width: 50%;
+    width: 100%;
+    height: 100%;
     padding: 0;
     left: 100%;
     bottom: 0;
@@ -72,21 +77,20 @@
     position: absolute;
     z-index: -1;
     bottom: 0;
+    height: calc(100% + 100px);
   }
 }
 
 .highlight-product-info__price-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
 .highlight-product-info__price {
   padding: 8px 0 20px;
   color: $secondary-font;
+  align-self: center;
 
   @include small-header;
 }
