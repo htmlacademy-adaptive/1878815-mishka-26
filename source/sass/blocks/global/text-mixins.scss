@@ -4,6 +4,16 @@
   line-height: 30px;
 }
 
+@mixin huge-header-tablet {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin huge-header-desktop {
+  font-size: 53px;
+  line-height: 57px;
+}
+
 @mixin big-header {
   font-weight: 700;
   font-size: 25px;
@@ -16,10 +26,22 @@
   line-height: 24px;
 }
 
+@mixin medium-header-tablet {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
 @mixin small-header {
   font-weight: 700;
   font-size: 17px;
-  line-height: 20px;
+  line-height: 18px;
+}
+
+@mixin small-header-tablet {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
 }
 
 @mixin big-text {

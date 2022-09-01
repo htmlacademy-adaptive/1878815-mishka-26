@@ -1,0 +1,44 @@
+
+.video-preview {
+  position: relative;
+  display: flex;
+  min-width: 260px;
+  min-height: 150px;
+  margin-left: -34px;
+  margin-right: -34px;
+  background-image: url("../img/backgrounds/video-mobile.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    margin-left: -42px;
+    margin-right: -42px;
+    margin-top: -42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    margin-left: 0;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+.video-preview__play-button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  left: calc(50% - 51px);
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+}

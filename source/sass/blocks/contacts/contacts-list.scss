@@ -1,7 +1,55 @@
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 7px 0;
+  color: $secondary-font;
+
+  @include text;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    grid-column: 2 / 4;
+    padding-right: 23px;
+  }
+}
+
 .contacts-list__contact-details {
   display: grid;
   grid-template-columns: 76px 1fr;
   margin: 0;
   padding: 5px 0 10px;
   justify-content: space-between;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.contacts-list__name {
+  display: flex;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.contacts-list__value {
+  display: flex;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

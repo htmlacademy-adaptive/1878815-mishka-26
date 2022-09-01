@@ -1,3 +1,10 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
 .review__text {
   margin: 0;
   padding: 15px 0;
@@ -7,5 +14,21 @@
 }
 
 .review__author {
+  display: flex;
+  flex-direction: column;
   padding: 16px 0;
+}
+
+.review__name {
+  color: $primary-font;
+  font-style: normal;
+
+  @include big-text-bold;
+}
+
+.review__social {
+  color: $secondary-font;
+  font-style: normal;
+
+  @include big-text;
 }

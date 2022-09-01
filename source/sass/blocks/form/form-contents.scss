@@ -1,0 +1,77 @@
+.form-contents {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.form-contents__description {
+  display: flex;
+  padding-bottom: 29px;
+  color: $secondary-font;
+
+  @include text-small;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / -2;
+  }
+}
+
+.form-contents__fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    grid-column: 1 / -2;
+
+    &:nth-of-type(even)::before {
+      position: absolute;
+      display: flex;
+      flex-grow: 1;
+      height: 100%;
+      width: 100%;
+      background-color: $secondary-background;
+      content: "";
+      z-index: -1;
+    }
+  }
+}
+
+.form-contents__button-disclaimer-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / -2;
+    align-items: baseline;
+  }
+}
+
+.form-contents__disclaimer {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: $secondary-font;
+  padding-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.form-contents__button {
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+    max-width: 30%;
+  }
+}
