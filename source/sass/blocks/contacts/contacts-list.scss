@@ -1,14 +1,15 @@
 
 .contacts-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: 15px;
   margin: 0;
-  padding: 7px 0;
+  padding: 21px 0;
   color: $secondary-font;
 
-  @include text;
+  @include text-tiny;
 
   @media (min-width: $tablet-width) {
+    display: flex;
     flex-direction: row;
   }
 

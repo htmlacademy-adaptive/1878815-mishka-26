@@ -20,7 +20,7 @@
 
 .highlight-product-info__intro {
   margin: 0;
-  padding: 12px 0 15px;
+  padding: 19px 0 5px;
   color: $secondary-font;
 
   @include text;
@@ -40,7 +40,7 @@
 
 .highlight-product-info__details-wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.66fr;
   margin: 0;
   padding: 5px 0 10px;
   justify-content: space-between;
@@ -60,7 +60,7 @@
 
 .highlight-product-info__image {
   display: flex;
-  padding: 20px 0;
+  padding: 15px 0;
   margin-left: auto;
   margin-right: auto;
 
@@ -84,11 +84,12 @@
 .highlight-product-info__price-wrapper {
   display: flex;
   flex-direction: column;
+  padding-top: 5px;
 }
 
 
 .highlight-product-info__price {
-  padding: 8px 0 20px;
+  padding: 8px 0 25px;
   color: $secondary-font;
   align-self: center;
 

@@ -17,6 +17,10 @@
   display: flex;
   flex-direction: column;
   padding: 16px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .review__name {
@@ -29,6 +33,7 @@
 .review__social {
   color: $secondary-font;
   font-style: normal;
+  padding-top: 7px;
 
   @include big-text;
 }

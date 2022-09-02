@@ -10,37 +10,8 @@
   border-top: 1px solid rgba($light-border, 0.4);
   border-bottom: 1px solid rgba($light-border, 0.4);
   justify-content: space-around;
-}
 
-@media (min-width: $tablet-width) {
-  .header {
+  @media (min-width: $tablet-width) {
     height: 89px;
-  }
-}
-
-.header__toggle {
-  display: block;
-  box-sizing: border-box;
-  width: 44px;
-  height: 44px;
-  margin: auto 0 auto auto;
-  padding: 10px;
-  border-style: none;
-  background-color: $primary-background;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  &--closed {
-    background-image: url("../img/icons/menu-closed.svg");
-  }
-
-  &--opened {
-    background-image: url("../img/icons/menu-opened.svg");
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .header__toggle {
-    display: none;
   }
 }

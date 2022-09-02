@@ -1,13 +1,14 @@
 .navigation {
-  position: absolute;
   display: flex;
   min-width: 100%;
-  top: 15%;
   flex-direction: column;
-  z-index: 1;
+
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    z-index: 1;
+  }
 
   @media (min-width: $tablet-width) {
-    position: initial;
     flex-direction: row;
     flex-wrap: wrap;
     top: 0;
@@ -22,71 +23,63 @@
   }
 }
 
-.navigation__navigation-list {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background-color: $primary-background;
-  top: 100%;
-
-  &--user-list {
-    order: 3;
-  }
-
-  &--site-list {
-    order: 2;
-  }
+.navigation__toggle {
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  margin: auto 0 auto auto;
+  padding: 10px;
+  border-style: none;
+  background-color: transparent;
+  top: 8px;
+  right: 0;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    position: initial;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: transparent;
-
-    &--user-list {
-      order: 2;
-      margin-left: auto;
-    }
-
-    &--site-list {
-      order: 3;
-      margin-right: auto;
-    }
-
-    &--aditional {
-      order: 3;
-      margin-left: auto;
-    }
+    display: none;
   }
+}
 
-  @media (max-width: $mobile-width-only) {
-    &--closed {
-      display: none;
-    }
+.navigation--closed .navigation__toggle::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: $primary-icon;
+  box-shadow: 0 6px 0 0 $primary-icon, 0 12px 0 0 $primary-icon;
+  top: 14px;
+  left: 16px;
+
+  &:active {
+    background-color: rgba($primary-icon, 0.2);
+    box-shadow: 0 6px 0 0 ($primary-icon, 0.2), 0 12px 0 0 ($primary-icon, 0.2);
   }
+}
 
-  @media (min-width: $desktop-width) {
-    &--site-list {
-      order: 1;
-      max-width: 40%;
-    }
+.navigation--nojs .navigation__toggle {
+  display: none;
+}
 
-    &--user-list {
-      order: 3;
-      min-width: 40%;
-      justify-content: flex-end;
-    }
+.navigation--opened .navigation__toggle::before,
+.navigation--opened .navigation__toggle::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 2px;
+  background-color: $primary-icon;
+  top: 20px;
+  left: 12px;
+}
 
-    &--aditional {
-      position: relative;
-      top: -100%;
-      order: 4;
-    }
-  }
+.navigation--opened .navigation__toggle::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+
+.navigation--opened .navigation__toggle::after {
+  transform: rotate(-45deg);
 }
 
 .navigation__logo {
@@ -95,7 +88,10 @@
   width: 86px;
   padding: 10px;
   align-self: center;
-  order: 1;
+
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+  }
 
   @media (min-width: $tablet-width) {
     order: 1;
@@ -110,77 +106,5 @@
     margin-bottom: auto;
     justify-content: center;
     align-self: center;
-  }
-}
-
-.navigation__navigation-item a {
-  color: $primary-font;
-  text-decoration: none;
-}
-
-.navigation__navigation-item {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 27px 30px 27px 100px;
-  color: $primary-font;
-  background-position: 50px center;
-  background-repeat: no-repeat;
-  text-align: left;
-  border-bottom: 1px solid rgba($light-border, 0.4);
-  justify-content: flex-start;
-
-  @include big-text-bold;
-
-  &--unlisted-mobile,
-  &--unlisted-tablet {
-    display: none;
-  }
-
-  &--search {
-    background-image: url("../img/icons/search.svg");
-
-    @media (min-width: $tablet-width) {
-      @include visually-hidden;
-    }
-  }
-
-  &--cart {
-    background-image: url("../img/icons/cart.svg");
-  }
-
-  &--big {
-    @include text-small;
-    font-weight: 700;
-
-    @media (min-width: $desktop-width) {
-      @include big-text-bold;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    border: none;
-    padding: 10px;
-
-    &--unlisted-mobile {
-      display: flex;
-    }
-
-    &--small {
-      @include text-small;
-      font-weight: 700;
-      color: $primary-font;
-    }
-
-    &--tiny {
-      @include text-small;
-      color: $secondary-font;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &--unlisted-tablet {
-      display: flex;
-    }
   }
 }

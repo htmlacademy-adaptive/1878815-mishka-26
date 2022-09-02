@@ -1,46 +1,45 @@
 .feedback {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 45px;
-
-  @media (min-width: $tablet-width) {
-    grid-column: 1 / -1;
-    padding-top: 42px;
-    padding-bottom: 68px;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: grid;
-  }
-}
-
-.feedback__feedback-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
+  padding-top: 32px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     position: relative;
+    grid-column: 1 / -1;
+    padding-top: 42px;
+    padding-bottom: 68px;
+    width: calc(100% + 50px);
+    margin-left: -50px;
     background-image: url("../img/backgrounds/review.jpg");
     background-position: left center;
     background-repeat: no-repeat;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0;
   }
 }
 
 .feedback__feedback-title {
   @include big-header;
+  margin: 0;
 
   color: $primary-font;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 50px;
+    justify-self: left;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     justify-self: left;
+    padding-left: 0;
   }
 }
 
@@ -50,31 +49,41 @@
   padding: 0;
   margin: 0;
 
+  @media (min-width: $tablet-width) {
+    padding-left: 50px;
+    justify-self: left;
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: 2 / -2;
     justify-self: left;
+    padding-left: 0;
   }
 }
 
 .feedback__list-item {
   display: none;
   padding: 0;
+  margin: 0;
 
   &--current {
     display: flex;
   }
 }
 
-
 .feedback__buttons-wrapper {
   display: flex;
   flex-direction: column;
   margin: auto;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    height: 100%;
+    width: fit-content;
+    height: calc(100% - 68px);
     right: 0;
+    top: 0;
+    padding: 0;
     flex-direction: column-reverse;
     justify-content: space-between;
   }
@@ -87,12 +96,19 @@
 .feedback__toggles {
   display: flex;
   justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .feedback__toggle {
   display: inline-block;
+  width: 50%;
   box-sizing: border-box;
-  padding: 13px 42px 13px 38px;
+  padding: 13px 42px 9px 38px;
   background: $primary-background;
   border: 1px solid rgba($light-border, 0.4);
   cursor: pointer;
@@ -104,5 +120,10 @@
 
   &:active {
     fill: rgba($primary-icon, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding: 20px;
   }
 }
