@@ -9,12 +9,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     grid-column: 1 / -1;
-    padding-top: 35px;
+    padding-top: 52px;
     padding-bottom: 52px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 120px;
+    padding-top: 135px;
     padding-bottom: 73px;
   }
 }

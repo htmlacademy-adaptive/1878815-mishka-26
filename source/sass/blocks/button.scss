@@ -5,9 +5,6 @@
   padding: 15px 28px;
   background-color: $primary-background;
   border: 2px solid $dark-border;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 20px;
   vertical-align: middle;
   word-wrap: none;
   color: $secondary-font;
@@ -15,6 +12,8 @@
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+
+  @include small-header;
 
   &:hover {
     background-color: $dark-background;
