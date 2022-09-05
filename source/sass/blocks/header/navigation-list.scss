@@ -43,10 +43,6 @@
     align-items: center;
     background-color: transparent;
 
-    .navigation--closed & {
-      display: flex;
-    }
-
     &--site-list {
       border: none;
       grid-row: 2 / -1;

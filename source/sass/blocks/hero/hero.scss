@@ -39,10 +39,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 157px 255px;
+    padding: 102px 255px;
 
     &--index {
       min-height: 745px;
+      padding-top: 157px;
     }
   }
 }

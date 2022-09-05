@@ -3,6 +3,7 @@
   flex-direction: column;
 
   @media (min-width: $desktop-width) {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
@@ -22,6 +23,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / -2;
+    padding-bottom: 31px;
   }
 }
 
@@ -30,7 +32,7 @@
   flex-direction: column;
 
   & + & {
-    margin-top: 31px;
+    margin-top: 32px;
   }
 
   & + &--name {
@@ -64,13 +66,21 @@
     &:nth-of-type(even)::before {
       position: absolute;
       height: calc(100% + 30px);
-      width: calc(100% + 100px);
+      width: calc(120% + 100px);
       margin-left: -50px;
       display: flex;
       background-color: #f1f1f1;
       z-index: -1;
       content: "";
       top: -12px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -2;
+
+    & + &--name {
+      margin-top: 29px;
     }
   }
 }
@@ -88,6 +98,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 15px;
     grid-column: 2 / -2;
     align-items: baseline;
   }

@@ -212,9 +212,10 @@
 }
 
 .label-wrapper__input-textarea {
-  width: 100%;
   padding: 15px;
   font-family: $basic-font-family;
+  font-size: 19px;
+  line-height: 18px;
   border: 2px solid $super-dark-border;
   background-color: transparent;
 
@@ -237,6 +238,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    width: 100%;
+
     &::placeholder {
       font-size: 19px;
       line-height: 18px;
