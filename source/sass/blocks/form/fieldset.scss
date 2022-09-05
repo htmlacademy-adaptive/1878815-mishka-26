@@ -1,7 +1,8 @@
 .fieldset {
   display: flex;
-  flex-direction: column;
   padding: 0;
+  margin: 0;
+  flex-direction: column;
   border: none;
   border-top: 1px solid $hightlight-border;
 
@@ -10,12 +11,15 @@
   }
 
   @media (min-width: $tablet-width) {
-    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0;
     border: none;
     justify-content: center;
+
+    & + & {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -33,13 +37,14 @@
   @include small-header;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    display: block;
-    grid-column: 1 / 2;
+    position: relative;
+    display: flex;
+    grid-column: 1/2;
     margin: 0;
     padding: 0;
     border: 0;
     align-self: center;
+    top: 35px;
   }
 
   @media (min-width: $desktop-width) {

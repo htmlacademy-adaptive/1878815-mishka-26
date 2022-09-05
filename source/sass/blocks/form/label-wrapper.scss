@@ -22,9 +22,15 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / -1;
+    gap: 24px;
+    padding: 0;
 
     &--checkbox {
       grid-template-columns: 1fr 1fr;
+    }
+
+    &--name {
+      gap: 18px;
     }
   }
 
@@ -52,6 +58,24 @@
 
   &--name {
     gap: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 52px 1fr;
+
+    &--radio {
+      gap: 26px;
+    }
+
+    &--checkbox {
+      gap: 30px;
+    }
+
+    &--name,
+    &--contact,
+    &--comment {
+      display: flex;
+    }
   }
 }
 
@@ -83,10 +107,10 @@
 
   .label-wrapper__input--radio:checked + &--radio::after {
     position: absolute;
-    top: 23%;
+    top: 26%;
     left: 25%;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background-color: $accent-icon;
     content: "";
@@ -116,6 +140,27 @@
   .label-wrapper__input:active + &--checkbox {
     border-color: rgba($dark-border, 0.3);
   }
+
+  @media (min-width: $tablet-width) {
+    width: 52px;
+    height: 52px;
+
+    .label-wrapper__input--radio:checked + &--radio::after {
+      width: 21px;
+      height: 21px;
+      top: 28%;
+      left: 28%;
+    }
+
+    .label-wrapper__input--checkbox:checked + &--checkbox::before,
+    .label-wrapper__input--checkbox:checked + &--checkbox::after {
+      width: 30px;
+    }
+
+    .label-wrapper__input--checkbox:checked + &--checkbox::after {
+      left: -17%;
+    }
+  }
 }
 
 .label-wrapper__input-field {
@@ -141,15 +186,35 @@
   }
 
   &--text::placeholder {
-    color: rgba($secondary-font, 0.3);
+    color: rgba($primary-font, 0.3);
 
     @include big-text;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--text {
+      display: flex;
+      flex-grow: 1;
+      margin-left: 25px;
+      padding: 16px 18px;
+    }
+
+    &--text::placeholder {
+      font-size: 19px;
+      line-height: 18px;
+    }
+
+    &--phone,
+    &--email {
+      margin: 0;
+    }
   }
 }
 
 .label-wrapper__input-textarea {
-  font-family: $basic-font-family;
+  width: 100%;
   padding: 15px;
+  font-family: $basic-font-family;
   border: 2px solid $super-dark-border;
   background-color: transparent;
 
@@ -165,9 +230,16 @@
   }
 
   &::placeholder {
-    color: rgba($secondary-font, 0.3);
+    color: rgba($primary-font, 0.3);
     font-family: $basic-font-family;
 
     @include big-text;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::placeholder {
+      font-size: 19px;
+      line-height: 18px;
+    }
   }
 }

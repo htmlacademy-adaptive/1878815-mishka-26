@@ -14,8 +14,10 @@
   line-height: 24px;
   color: $secondary-font;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     @include big-text;
+
+    line-height: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,6 +38,7 @@
   }
 
   & + &--contact {
+    display: grid;
     gap: 15px;
     padding-bottom: 15px;
   }
@@ -46,17 +49,28 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    grid-column: 1 / -2;
+    padding-top: 16px;
+    padding-bottom: 33px;
+
+    & + &--contact {
+      gap: 0;
+      padding-bottom: 30px;
+    }
+
+    & + &--comment {
+      margin-top: 35px;
+    }
 
     &:nth-of-type(even)::before {
       position: absolute;
+      height: calc(100% + 30px);
+      width: calc(100% + 100px);
+      margin-left: -50px;
       display: flex;
-      flex-grow: 1;
-      height: 100%;
-      width: 100%;
-      background-color: $secondary-background;
-      content: "";
+      background-color: #f1f1f1;
       z-index: -1;
+      content: "";
+      top: -12px;
     }
   }
 }
@@ -67,6 +81,7 @@
   padding-top: 15px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 20px;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: baseline;
@@ -87,12 +102,14 @@
 
   @media (min-width: $tablet-width) {
     margin-left: auto;
+
+    @include big-text;
   }
 }
 
 .form-contents__button {
   @media (min-width: $tablet-width) {
     margin-right: auto;
-    max-width: 30%;
+    max-width: fit-content;
   }
 }
