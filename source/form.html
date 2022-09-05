@@ -67,7 +67,7 @@
         <form class="form-contents" action="https://echo.htmlacademy.ru/" method="get">
           <span class="form-contents__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните
             простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</span>
-          <div class="form-contents__fieldset-wrapper">
+          <div class="form-contents__fieldset-wrapper form-contents__fieldset-wrapper--type">
             <fieldset class="fieldset">
               <legend class="fieldset__field-legend">Тип</legend>
               <div class="label-wrapper label-wrapper--radio">
@@ -86,7 +86,7 @@
             </div>
           </fieldset>
           </div>
-          <div class="form-contents__fieldset-wrapper">
+          <div class="form-contents__fieldset-wrapper form-contents__fieldset-wrapper--color">
             <fieldset class="fieldset">
               <legend class="fieldset__field-legend">Цвет</legend>
               <div class="label-wrapper label-wrapper--checkbox">
@@ -124,10 +124,10 @@
               </div>
             </fieldset>
           </div>
-          <div class="form-contents__fieldset-wrapper">
+          <div class="form-contents__fieldset-wrapper form-contents__fieldset-wrapper--name">
             <fieldset class="fieldset">
               <legend class="fieldset__field-legend">ФИО</legend>
-              <div class="label-wrapper">
+              <div class="label-wrapper label-wrapper--name">
                 <label class="label-wrapper__form-label label-wrapper__form-label--name">
                   <span class="label-wrapper__input-caption label-wrapper__input-caption--name">Имя:</span>
                   <input class="label-wrapper__input-field label-wrapper__input-field--text" type="text" name="name" placeholder="Введите ваше имя*" required>
@@ -143,10 +143,10 @@
               </div>
             </fieldset>
           </div>
-          <div class="form-contents__fieldset-wrapper">
+          <div class="form-contents__fieldset-wrapper form-contents__fieldset-wrapper--contact">
             <fieldset class="fieldset">
               <legend class="fieldset__field-legend">Тел</legend>
-              <div class="label-wrapper">
+              <div class="label-wrapper label-wrapper--contact">
                 <label class="label-wrapper__form-label label-wrapper__form-label--contact">
                   <input class="label-wrapper__input-field label-wrapper__input-field--text label-wrapper__input-field--phone" type="text" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                 </label>
@@ -154,19 +154,19 @@
             </fieldset>
             <fieldset class="fieldset">
               <legend class="fieldset__field-legend">E-mail</legend>
-              <div class="label-wrapper">
+              <div class="label-wrapper label-wrapper--contact">
                 <label class="label-wrapper__form-label label-wrapper__form-label--contact">
                   <input class="label-wrapper__input-field label-wrapper__input-field--text label-wrapper__input-field--email" type="text" name="e-mail" placeholder="Ваш Email*" required>
                 </label>
               </div>
             </fieldset>
           </div>
-          <div class="form-contents__fieldset-wrapper">
+          <div class="form-contents__fieldset-wrapper form-contents__fieldset-wrapper--comment">
             <fieldset class="fieldset">
               <legend class="fieldset__field-legend">Доп</legend>
-                <div class="label-wrapper">
+                <div class="label-wrapper--comment">
                   <label class="label-wrapper__form-label label-wrapper__form-label--comment">
-                    <textarea class="label-wrapper__input-textarea" name="comment" placeholder="Опишите все ваши пожелания к заказу" rows="6"></textarea>
+                    <textarea class="label-wrapper__input-textarea" name="comment" placeholder="Опишите все ваши пожелания к заказу" rows="5"></textarea>
                   </label>
                 </div>
             </fieldset>

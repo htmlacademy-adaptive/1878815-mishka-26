@@ -44,7 +44,7 @@
   @media (min-width: $desktop-width) {
     @include huge-header-desktop;
 
-    grid-column: 2 / 3;
+    grid-column: 2 / -3;
     justify-self: left;
     padding-left: 0;
   }
@@ -98,7 +98,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: -2/-1;
+    grid-column: -3/-1;
     padding-right: 50px;
     height: calc(100% - 165px);
     top: 82px;

@@ -1,9 +1,29 @@
 .label-wrapper {
+  display: grid;
+  gap: 13px;
+
+  &--radio {
+    padding-top: 33px;
+  }
+
+  &--checkbox {
+    padding-top: 24px;
+    gap: 23px;
+  }
+
+  &--name {
+    padding-top: 29px;
+    gap: 21px;
+  }
+
+  &--comment {
+    padding-top: 23px;
+  }
+
   @media (min-width: $tablet-width) {
     grid-column: 2 / -1;
 
     &--checkbox {
-      display: grid;
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -17,9 +37,9 @@
 
 .label-wrapper__form-label {
   display: grid;
-  padding: 10px 0;
+  padding-left: 0;
   grid-template-columns: 42px 1fr;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
   cursor: pointer;
 
@@ -29,20 +49,19 @@
     grid-template-columns: 1fr;
     cursor: auto;
   }
+
+  &--name {
+    gap: 0;
+  }
 }
 
 .label-wrapper__input-caption {
   @include small-header;
 
-  &--name {
-    padding: 10px 0;
-  }
-
   @media (min-width: $tablet-width) {
     @include small-header-tablet;
   }
 }
-
 
 .label-wrapper__input-custom {
   position: relative;
@@ -102,7 +121,7 @@
 .label-wrapper__input-field {
   display: inline-block;
   box-sizing: border-box;
-  padding: 18px 0;
+  padding: 14px 0;
   border: none;
   border-bottom: 2px solid $super-dark-border;
   font-size: 19px;

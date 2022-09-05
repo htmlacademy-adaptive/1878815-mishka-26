@@ -3,7 +3,6 @@
   flex-direction: column;
 
   @media (min-width: $desktop-width) {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
@@ -11,9 +10,13 @@
 .form-contents__description {
   display: flex;
   padding-bottom: 29px;
+  font-size: 13px;
+  line-height: 24px;
   color: $secondary-font;
 
-  @include text-small;
+  @media (min-width: $desktop-width) {
+    @include big-text;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / -2;
@@ -23,6 +26,23 @@
 .form-contents__fieldset-wrapper {
   display: flex;
   flex-direction: column;
+
+  & + & {
+    margin-top: 31px;
+  }
+
+  & + &--name {
+    margin-top: 33px;
+  }
+
+  & + &--contact {
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+
+  & + &--comment {
+    margin-top: 23px;
+  }
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -44,6 +64,7 @@
 .form-contents__button-disclaimer-wrapper {
   display: flex;
   flex-direction: column;
+  padding-top: 15px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row-reverse;
@@ -62,7 +83,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $secondary-font;
-  padding-bottom: 18px;
+  padding-bottom: 28px;
 
   @media (min-width: $tablet-width) {
     margin-left: auto;
