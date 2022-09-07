@@ -1,7 +1,7 @@
 .products {
   display: flex;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
