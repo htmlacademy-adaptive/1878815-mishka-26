@@ -14,16 +14,16 @@
       <nav class="navigation navigation--closed navigation--nojs">
         <ul class="navigation-list navigation-list--site-list">
             <li class="navigation-list__item navigation-list__item--big">
-              <a href="catalog.html">Каталог товаров</a>
+              <a class="navigation-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="navigation-list__item navigation-list__item--big">
-              <a href="form.html">Вязание на заказ</a>
+              <a class="navigation-list__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="navigation-list__item navigation-list__item--small navigation-list__item--unlisted-tablet">
-              <a href="catalog.html">Новые поступления</a>
+              <a class="navigation-list__link" href="catalog.html">Новые поступления</a>
             </li>
             <li class="navigation-list__item navigation-list__item--small navigation-list__item--unlisted-tablet">
-              <a href="catalog.html">Распродажа</a>
+              <a class="navigation-list__link" href="catalog.html">Распродажа</a>
             </li>
         </ul>
         <a class="navigation__logo" href="index.html">
@@ -31,21 +31,23 @@
         </a>
         <ul class="navigation-list navigation-list--user-list">
           <li class="navigation-list__item navigation-list__item--search">
-            <a href="#">
-              <svg class="navigation-list__icon navigation-list__icon--search" width="21" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="m17.693 16.057-3.477-3.477c1.023-1.33 1.534-2.966 1.534-4.705C15.75 3.477 12.273 0 7.875 0S0 3.477 0 7.875s3.477 7.875 7.875 7.875c1.739 0 3.375-.614 4.704-1.534l3.478 3.477c.204.205.409.307.818.307.614 0 1.125-.511 1.125-1.125 0-.204-.102-.511-.307-.818ZM2.25 7.875c0-3.068 2.557-5.625 5.625-5.625S13.5 4.807 13.5 7.875 10.943 13.5 7.875 13.5 2.25 10.943 2.25 7.875Z"/></svg>
-              <span>Поиск по сайту<span>
+            <a class="navigation-list__link" href="#">
+              <svg class="navigation-list__icon navigation-list__icon--search" width="21" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="m17.693 16.057-3.477-3.477c1.023-1.33 1.534-2.966 1.534-4.705C15.75 3.477 12.273 0 7.875 0S0 3.477 0 7.875s3.477 7.875 7.875 7.875c1.739 0 3.375-.614 4.704-1.534l3.478 3.477c.204.205.409.307.818.307.614 0 1.125-.511 1.125-1.125 0-.204-.102-.511-.307-.818ZM2.25 7.875c0-3.068 2.557-5.625 5.625-5.625S13.5 4.807 13.5 7.875 10.943 13.5 7.875 13.5 2.25 10.943 2.25 7.875Z"/>
+              </svg>
+              <span>Поиск по сайту</span>
             </a>
           </li>
           <li class="navigation-list__item navigation-list__item--cart navigation-list__item--big">
-            <a href="#">
-              <svg class="navigation-list__icon navigation-list__icon--cart" width="21" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z"></svg>
+            <a class="navigation-list__link" href="#">
+              <svg class="navigation-list__icon navigation-list__icon--cart" width="21" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z"/></svg>
               Корзина: пока пуста
             </a>
           </li>
         </ul>
         <ul class="navigation-list navigation-list--additional">
           <li class="navigation-list__item navigation-list__item--tiny navigation-list__item--unlisted-mobile">
-            <a href="#">Бесплатная доставка по России</a>
+            <a class="navigation-list__link" href="#">Бесплатная доставка по России</a>
           </li>
         </ul>
         <button class="navigation__toggle" type="button">
@@ -64,53 +66,60 @@
         <h2 class="visually-hidden">Ассортимент Mishka.</h2>
         <ul class="products__product-list">
           <li class="product-card">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link--image" href="#">
               <img class="product-card__product-image" src="./img/product-images/prod-hare_mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-              <div class="product-card__product-info">
+            </a>
+            <div class="product-card__product-info">
+              <a class="product-card__link--info" href="#">
                 <div class="product-card__name-description-wrapper">
                   <h3 class="product-card__name">Зайчик-попрыгайчик</h3>
                   <p class="product-card__description">Рост 30&nbsp;см, вес 200&nbsp;г</p>
                 </div>
-                <div class="product-card__price-cart-wrapper">
-                  <p class="product-card__price">1&nbsp;200&nbsp;руб.</p>
-                  <button class="product-card__cart" type="button">
-                    <span class="visually-hidden">Добавить в корзину.</span>
-                    <svg class="product-card__cart-icon" width="21" height="18" viewBox="0 0 21 18" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z"/>
-                    </svg>
+              </a>
+              <div class="product-card__price-cart-wrapper">
+                <p class="product-card__price">1&nbsp;200&nbsp;руб.</p>
+                <button class="product-card__cart" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                  <svg class="product-card__cart-icon" width="21" height="18" viewBox="0 0 21 18" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z"/>
+                  </svg>
                   </button>
-                </div>
               </div>
-            </a>
+            </div>
           </li>
           <li class="product-card">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link--image" href="#">
               <img class="product-card__product-image" src="./img/product-images/prod-towel-basket_mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-              <div class="product-card__product-info">
+            </a>
+            <div class="product-card__product-info">
+              <a class="product-card__link--info" href="#">
                 <div class="product-card__name-description-wrapper">
                   <h3 class="product-card__name">Корзинка для&nbsp;белья</h3>
                   <p class="product-card__description">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
                 </div>
-                <div class="product-card__price-cart-wrapper">
-                  <p class="product-card__price">690&nbsp;руб.</p>
-                  <button class="product-card__cart" type="button">
-                    <span class="visually-hidden">Добавить в корзину.</span>
-                    <svg class="product-card__cart-icon" width="21" height="18" viewBox="0 0 21 18" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z"/>
-                    </svg>
-                  </button>
-                </div>
+              </a>
+              <div class="product-card__price-cart-wrapper">
+                <p class="product-card__price">690&nbsp;руб.</p>
+                <button class="product-card__cart" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                  <svg class="product-card__cart-icon" width="21" height="18" viewBox="0 0 21 18" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z"/>
+                  </svg>
+                </button>
               </div>
-            </a>
+              </div>
           </li>
           <li class="product-card">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link--image" href="#">
               <img class="product-card__product-image" src="./img/product-images/prod-toy-basket_mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-              <div class="product-card__product-info">
+            </a>
+            <div class="product-card__product-info">
+              <a class="product-card__link--info" href="#">
                 <div class="product-card__name-description-wrapper">
                   <h3 class="product-card__name">Большая корзинка для&nbsp;игрушек</h3>
                   <p class="product-card__description">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
                 </div>
+              </a>
                 <div class="product-card__price-cart-wrapper">
                   <p class="product-card__price">1&nbsp;500&nbsp;руб.</p>
                   <button class="product-card__cart" type="button">
@@ -120,8 +129,7 @@
                     </svg>
                   </button>
                 </div>
-              </div>
-            </a>
+            </div>
           </li>
         </ul>
         <!--display on 'highlight-product-info__button' click, add <div class="modal"> class "modal--opened" to show-->
@@ -151,8 +159,6 @@
           </form>
         </div>
         <!--modal end-->
-        </div>
-      </div>
       </section>
       <section class="our-production">
         <h2 class="visually-hidden">О производстве Mishka.</h2>
@@ -170,7 +176,6 @@
             </div>
             <p class="our-production__video-description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о&nbsp;том, как появляются наши товары.</p>
             <a class="our-production__call-to-action button" href="#">Сделать заказ</a>
-          </div>
         </article>
       </section>
     </main>
