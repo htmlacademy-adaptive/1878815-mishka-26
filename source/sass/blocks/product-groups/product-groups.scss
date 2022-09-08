@@ -57,7 +57,7 @@
 
 .product-groups__product-link {
   display: flex;
-  padding: 21px 27px 21px 30px;
+  padding: 18px 27px 24px 30px;
   flex-grow: 1;
   align-items: center;
   justify-content: space-between;
@@ -73,7 +73,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 30px 33px 27px 36px;
+    padding: 25px 35px 33px 36px;
   }
 }
 

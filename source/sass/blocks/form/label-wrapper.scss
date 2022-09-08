@@ -1,10 +1,36 @@
 .label-wrapper {
+  display: grid;
+  gap: 13px;
+
+  &--radio {
+    padding-top: 33px;
+  }
+
+  &--checkbox {
+    padding-top: 24px;
+    gap: 23px;
+  }
+
+  &--name {
+    padding-top: 29px;
+    gap: 21px;
+  }
+
+  &--comment {
+    padding-top: 23px;
+  }
+
   @media (min-width: $tablet-width) {
     grid-column: 2 / -1;
+    gap: 24px;
+    padding: 0;
 
     &--checkbox {
-      display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+
+    &--name {
+      gap: 18px;
     }
   }
 
@@ -17,9 +43,9 @@
 
 .label-wrapper__form-label {
   display: grid;
-  padding: 10px 0;
+  padding-left: 0;
   grid-template-columns: 42px 1fr;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
   cursor: pointer;
 
@@ -29,20 +55,37 @@
     grid-template-columns: 1fr;
     cursor: auto;
   }
+
+  &--name {
+    gap: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 52px 1fr;
+
+    &--radio {
+      gap: 26px;
+    }
+
+    &--checkbox {
+      gap: 30px;
+    }
+
+    &--name,
+    &--contact,
+    &--comment {
+      display: flex;
+    }
+  }
 }
 
 .label-wrapper__input-caption {
   @include small-header;
 
-  &--name {
-    padding: 10px 0;
-  }
-
   @media (min-width: $tablet-width) {
     @include small-header-tablet;
   }
 }
-
 
 .label-wrapper__input-custom {
   position: relative;
@@ -64,10 +107,10 @@
 
   .label-wrapper__input--radio:checked + &--radio::after {
     position: absolute;
-    top: 23%;
+    top: 26%;
     left: 25%;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background-color: $accent-icon;
     content: "";
@@ -97,12 +140,33 @@
   .label-wrapper__input:active + &--checkbox {
     border-color: rgba($dark-border, 0.3);
   }
+
+  @media (min-width: $tablet-width) {
+    width: 52px;
+    height: 52px;
+
+    .label-wrapper__input--radio:checked + &--radio::after {
+      width: 21px;
+      height: 21px;
+      top: 28%;
+      left: 28%;
+    }
+
+    .label-wrapper__input--checkbox:checked + &--checkbox::before,
+    .label-wrapper__input--checkbox:checked + &--checkbox::after {
+      width: 30px;
+    }
+
+    .label-wrapper__input--checkbox:checked + &--checkbox::after {
+      left: -17%;
+    }
+  }
 }
 
 .label-wrapper__input-field {
   display: inline-block;
   box-sizing: border-box;
-  padding: 18px 0;
+  padding: 14px 0;
   border: none;
   border-bottom: 2px solid $super-dark-border;
   font-size: 19px;
@@ -122,15 +186,36 @@
   }
 
   &--text::placeholder {
-    color: rgba($secondary-font, 0.3);
+    color: rgba($primary-font, 0.3);
 
     @include big-text;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--text {
+      display: flex;
+      flex-grow: 1;
+      margin-left: 25px;
+      padding: 16px 18px;
+    }
+
+    &--text::placeholder {
+      font-size: 19px;
+      line-height: 18px;
+    }
+
+    &--phone,
+    &--email {
+      margin: 0;
+    }
   }
 }
 
 .label-wrapper__input-textarea {
-  font-family: $basic-font-family;
   padding: 15px;
+  font-family: $basic-font-family;
+  font-size: 19px;
+  line-height: 18px;
   border: 2px solid $super-dark-border;
   background-color: transparent;
 
@@ -146,9 +231,18 @@
   }
 
   &::placeholder {
-    color: rgba($secondary-font, 0.3);
+    color: rgba($primary-font, 0.3);
     font-family: $basic-font-family;
 
     @include big-text;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+
+    &::placeholder {
+      font-size: 19px;
+      line-height: 18px;
+    }
   }
 }

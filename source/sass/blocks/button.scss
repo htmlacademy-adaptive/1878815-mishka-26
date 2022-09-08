@@ -2,19 +2,16 @@
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding: 16px 28px;
+  padding: 15px 26px;
   background-color: $primary-background;
   border: 2px solid $dark-border;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 20px;
-  vertical-align: middle;
-  word-wrap: none;
   color: $secondary-font;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+
+  @include small-header;
 
   &:hover {
     background-color: $dark-background;

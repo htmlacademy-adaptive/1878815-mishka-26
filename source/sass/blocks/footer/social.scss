@@ -1,28 +1,31 @@
 .social-list {
+  position: relative;
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
-  border-bottom: 1px solid rgba($light-border, 0.4);
-
-  @media (min-width: $tablet-width) {
-    border: none;
-  }
 }
 
 .social-list__item {
-  margin: 0;
   padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
   align-items: center;
   justify-items: center;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social-list__link {
   display: inline-block;
   box-sizing: border-box;
-  padding: 15px;
-  align-items: center;
-  justify-items: center;
+  padding: 5px;
   fill: $primary-icon;
 
   &:hover {

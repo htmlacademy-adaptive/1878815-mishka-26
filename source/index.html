@@ -11,46 +11,54 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="navigation">
-        <ul class="navigation__navigation-list navigation__navigation-list--closed navigation__navigation-list--site-list">
-            <li class="navigation__navigation-item navigation__navigation-item--big">
-              <a href="catalog.html">Каталог товаров</a>
+      <nav class="navigation navigation--closed navigation--nojs">
+        <ul class="navigation-list navigation-list--site-list">
+            <li class="navigation-list__item navigation-list__item--big">
+              <a class="navigation-list__link" href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="navigation__navigation-item navigation__navigation-item--big">
-              <a href="form.html">Вязание на заказ</a>
+            <li class="navigation-list__item navigation-list__item--big">
+              <a class="navigation-list__link" href="form.html">Вязание на заказ</a>
             </li>
-            <li class="navigation__navigation-item navigation__navigation-item--big navigation__navigation-item--unlisted-tablet">
-              <a href="catalog.html">Новые поступления</a>
+            <li class="navigation-list__item navigation-list__item--small navigation-list__item--unlisted-tablet">
+              <a class="navigation-list__link" href="catalog.html">Новые поступления</a>
             </li>
-            <li class="navigation__navigation-item navigation__navigation-item--unlisted-tablet">
-              <a href="catalog.html">Распродажа</a>
+            <li class="navigation-list__item navigation-list__item--small navigation-list__item--unlisted-tablet">
+              <a class="navigation-list__link" href="catalog.html">Распродажа</a>
             </li>
         </ul>
         <a class="navigation__logo" href="index.html">
           <img class="navigation__logo-image" src="./img/logos/mishka-logo-mobile.svg" width="86" height="35" alt="Интернет-магазин Mishka.">
         </a>
-        <ul class="navigation__navigation-list navigation__navigation-list--closed navigation__navigation-list--user-list">
-            <li class="navigation__navigation-item navigation__navigation-item--search navigation__navigation-item--big">
-              <a href="#">Поиск по сайту</a>
-            </li>
-            <li class="navigation__navigation-item navigation__navigation-item--cart navigation__navigation-item--big">
-              <a href="#">Корзина: пока пуста</a>
-            </li>
-        </ul>
-        <ul class="navigation__navigation-list navigation__navigation-list--aditional">
-          <li class="navigation__navigation-item navigation__navigation-item--tiny navigation__navigation-item--unlisted-mobile">
-            <a href="#">Бесплатная доставка по России</a>
+        <ul class="navigation-list navigation-list--user-list">
+          <li class="navigation-list__item navigation-list__item--search">
+            <a class="navigation-list__link" href="#">
+              <svg class="navigation-list__icon navigation-list__icon--search" width="21" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="m17.693 16.057-3.477-3.477c1.023-1.33 1.534-2.966 1.534-4.705C15.75 3.477 12.273 0 7.875 0S0 3.477 0 7.875s3.477 7.875 7.875 7.875c1.739 0 3.375-.614 4.704-1.534l3.478 3.477c.204.205.409.307.818.307.614 0 1.125-.511 1.125-1.125 0-.204-.102-.511-.307-.818ZM2.25 7.875c0-3.068 2.557-5.625 5.625-5.625S13.5 4.807 13.5 7.875 10.943 13.5 7.875 13.5 2.25 10.943 2.25 7.875Z"/>
+              </svg>
+              <span>Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="navigation-list__item navigation-list__item--cart navigation-list__item--big">
+            <a class="navigation-list__link" href="#">
+              <svg class="navigation-list__icon navigation-list__icon--cart" width="21" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z"/></svg>
+              Корзина: пока пуста
+            </a>
           </li>
         </ul>
-      </nav>
-      <button class="header__toggle header__toggle--closed" type="button">
+        <ul class="navigation-list navigation-list--additional">
+          <li class="navigation-list__item navigation-list__item--tiny navigation-list__item--unlisted-mobile">
+            <a class="navigation-list__link" href="#">Бесплатная доставка по России</a>
+          </li>
+        </ul>
+        <button class="navigation__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
-      </button>
+        </button>
+      </nav>
     </header>
     <main class="main-container">
       <section class="hero hero--index">
         <div class="hero__hero-wrapper hero__hero-wrapper--index">
-          <h1 class="hero__header hero__header--index">Милые штуки<br>ручной<br>работы для дома</h1>
+          <h1 class="hero__header hero__header--index">Милые штуки<br> ручной<br> работы для&nbsp;дома</h1>
       </div>
       <hr class="hero__separator">
       </section>
@@ -133,7 +141,7 @@
       <hr class="main-container__separator">
       <section class="advantages">
         <div class="advantages__advantages-wrapper">
-          <h2 class="advantages__advantages-header">Коротко о нас</h2>
+          <h2 class="advantages__advantages-header">Коротко о нас:</h2>
           <ul class="advantages-list">
             <li class="advantages-list__list-item advantages-list__list-item--eco">
               <h3 class="advantages-list__header">Экологически чистые материалы</h3>
@@ -157,9 +165,8 @@
         </div>
       </section>
       <section class="feedback">
-        <div class="feedback__feedback-wrapper">
-          <h2 class="feedback__feedback-title">Отзывы</h2>
-          <ul class="feedback__feedback-list">
+        <h2 class="feedback__feedback-title">Отзывы</h2>
+        <ul class="feedback__feedback-list">
             <!--add "&--current" to show current slide/review-->
             <li class="feedback__list-item feedback__list-item--current">
               <blockquote class="review">
@@ -171,22 +178,21 @@
                   </cite>
               </blockquote>
             </li>
-          </ul>
-          <div class="feedback__buttons-wrapper">
-            <div class="feedback__toggles">
-              <button class="feedback__toggle feedback__toggle--previous" type="button"><span class="visually-hidden">Предыдущий отзыв.</span>
-                <svg class="feedback__arrow" width="50" height="26" viewBox="0 0 50 26" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z"/>
-                </svg>
-              </button>
-              <button class="feedback__toggle feedback__toggle--next" type="button"><span class="visually-hidden">Следующий отзыв.</span>
-                <svg class="feedback__arrow" width="50" height="26" viewBox="0 0 50 26" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z"/>
-                </svg>
-              </button>
-            </div>
-            <a class="feedback__button button" href="#">Написать</a>
+        </ul>
+        <div class="feedback__buttons-wrapper">
+          <div class="feedback__toggles">
+            <button class="feedback__toggle feedback__toggle--previous" type="button"><span class="visually-hidden">Предыдущий отзыв.</span>
+              <svg class="feedback__arrow" width="50" height="26" viewBox="0 0 50 26" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z"/>
+              </svg>
+            </button>
+            <button class="feedback__toggle feedback__toggle--next" type="button"><span class="visually-hidden">Следующий отзыв.</span>
+              <svg class="feedback__arrow" width="50" height="26" viewBox="0 0 50 26" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z"/>
+              </svg>
+            </button>
           </div>
+          <a class="feedback__button button" href="#">Написать</a>
         </div>
       </section>
       <hr class="main-container__separator">
@@ -202,9 +208,7 @@
             <dd class="contacts-list__value">г.&nbsp;Санкт-Петербург ул.&nbsp;Большая Конюшенная д.&nbsp;19/8, офис&nbsp;101</dd>
           </div>
         </dl>
-        <div class="contacts__map">
-          <img src="./img/backgrounds/map-mobile.jpg" width="320" height="454" alt="Mishka на карте">
-        </div>
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003244!2d30.320858716250562!3d59.93871916905394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1662054411128!5m2!1sen!2sru" allowfullscreen title="Mishka на карте"></iframe>
         <a class="contacts__contact-button button" href="#">Напишите нам</a>
       </section>
     </main>
@@ -249,5 +253,6 @@
         </a>
       </div>
     </footer>
+    <script src="./js/navigation-toogle.js"></script>
   </body>
 </html>

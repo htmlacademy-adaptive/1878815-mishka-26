@@ -1,15 +1,31 @@
 .footer {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 25px 30px 23px;
-  background-color: $secondary-background;
+  padding: 23px 30px;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
+  background-color: $secondary-background;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
     align-content: center;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  &::after {
+    position: absolute;
+    display: flex;
+    content: "";
+    height: 1px;
+    background-color: rgba($dark-border, 0.3);
+    width: calc(100% - 60px);
+    top: calc(50% - 8px);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -19,7 +35,7 @@
   @media (min-width: $tablet-width) {
     display: inline-block;
     box-sizing: border-box;
-    padding: 15px;
+    padding: 10px;
     align-items: center;
     justify-items: center;
     fill: $primary-icon;
@@ -39,7 +55,11 @@
 .footer__made {
   display: flex;
   align-items: center;
-  justify-items: center;
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .footer__made-text {

@@ -1,43 +1,46 @@
 .fieldset {
   display: flex;
+  padding: 0;
+  margin: 0;
   flex-direction: column;
-  padding: 15px 0;
   border: none;
   border-top: 1px solid $hightlight-border;
 
+  & + & {
+    margin-top: 20px;
+  }
+
   @media (min-width: $tablet-width) {
-    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0;
     border: none;
     justify-content: center;
+
+    & + & {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-column: 2 / -2;
   }
 }
 
 .fieldset__field-legend {
   padding-right: 20px;
   text-transform: uppercase;
+  padding-left: 0;
   color: $accent-font;
 
   @include small-header;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    display: block;
-    grid-column: 1 / 2;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    align-self: center;
+    position: relative;
+    top: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    justify-self: center;
+    margin-left: 60px;
   }
 }

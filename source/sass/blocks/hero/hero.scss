@@ -32,15 +32,18 @@
     padding: 100px 100px 75px;
 
     &--index {
-      min-height: 758px;
+      min-height: 745px;
+      width: 100%;
+      padding: 155px 50px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 100px 100px 95px;
+    padding: 102px 255px;
 
     &--index {
-      min-height: 763px;
+      min-height: 745px;
+      padding-top: 157px;
     }
   }
 }
@@ -53,6 +56,10 @@
 
   @media (min-width: $tablet-width) {
     @include huge-header-tablet;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -76,7 +83,7 @@
     background-position: center center;
     background-repeat: repeat-x;
     border: none;
-    transform: translateY(50%);
+    transform: translateY(30%);
     z-index: 1;
     bottom: 0;
   }

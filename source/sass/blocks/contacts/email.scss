@@ -1,16 +1,16 @@
 .email {
   position: relative;
   color: $secondary-font;
-  border-bottom: 1px solid $hightlight-border;
+  box-shadow: inset 0 -1px 0 $hightlight-border;
   text-decoration: none;
 
   &:hover {
     color: $accent-font-additional;
-    border-bottom: 1px solid $hightlight-border-additional;
+    box-shadow: inset 0 -1px 0 $hightlight-border-additional;
   }
 
   &:active {
     color: $accent-font-additional;
-    border-bottom: 1px solid rgba($hightlight-border-additional, 0.1);
+    box-shadow: inset 0 -1px 0 rgba($hightlight-border-additional, 0.1);
   }
 }
