@@ -144,7 +144,9 @@
   fill: rgba($primary-icon, 0.2);
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     fill: $accent-icon;
   }
 

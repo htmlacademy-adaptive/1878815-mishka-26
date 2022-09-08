@@ -47,6 +47,7 @@
   grid-template-columns: 42px 1fr;
   gap: 16px;
   align-items: center;
+  fill: rgba($super-dark-border, 0.2);
   cursor: pointer;
 
   &--name,
@@ -58,6 +59,16 @@
 
   &--name {
     gap: 0;
+  }
+
+  &--contact {
+    position: relative;
+    fill: rgba($super-dark-border, 0.2);
+  }
+
+  &:focus-within,
+  &:hover {
+    fill: $hightlight-border;
   }
 
   @media (min-width: $tablet-width) {
@@ -77,6 +88,11 @@
       display: flex;
     }
   }
+}
+
+.label-wrapper__input-icon {
+  position: absolute;
+  right: 10px;
 }
 
 .label-wrapper__input-caption {
@@ -221,13 +237,10 @@
 
   &:hover,
   &:focus,
-  &:focus-visible {
+  &:focus-visible,
+  &:active {
     border: 2px solid $hightlight-border;
     outline: none;
-  }
-
-  &:active {
-    border-bottom: 2px solid $super-dark-border;
   }
 
   &::placeholder {

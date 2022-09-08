@@ -40,7 +40,9 @@
     justify-items: center;
     fill: $primary-icon;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       fill: $hightlight-icon;
     }
 

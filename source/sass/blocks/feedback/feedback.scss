@@ -126,7 +126,9 @@
   cursor: pointer;
   fill: $primary-icon;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     fill: rgba($primary-icon, 0.6);
   }
 
