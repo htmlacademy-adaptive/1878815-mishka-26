@@ -13,7 +13,7 @@
     padding-top: 82px;
     padding-bottom: 50px;
     margin-left: -50px;
-    margin-bottom: 68px;
+    margin-bottom: 58px;
     background-image: url("../img/backgrounds/review-tablet.jpg");
     background-repeat: no-repeat;
     background-position: left;
@@ -27,8 +27,9 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: 0;
+    margin-left: 0;
     background-image: url("../img/backgrounds/review-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -74,7 +75,6 @@
     grid-column: 2/-1;
     justify-self: left;
     padding-left: 0;
-    padding-right: 50px;
     padding-top: 0;
   }
 }
@@ -108,9 +108,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: -3/-1;
-    padding-right: 50px;
     height: calc(100% - 165px);
-    top: 82px;
   }
 }
 

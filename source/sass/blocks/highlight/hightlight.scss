@@ -10,12 +10,12 @@
     display: flex;
     grid-column: 1 / -1;
     padding-top: 52px;
-    padding-bottom: 52px;
+    padding-bottom: 42px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 135px;
-    padding-bottom: 73px;
+    padding-bottom: 63px;
   }
 }
 
