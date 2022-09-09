@@ -16,7 +16,7 @@
 .hero__hero-wrapper {
   display: inline-flex;
   box-sizing: border-box;
-  height: 100%;
+  min-width: 100%;
   padding: 73px 23px;
   justify-content: center;
 
