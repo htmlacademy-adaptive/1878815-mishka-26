@@ -2,14 +2,8 @@
 .video-preview {
   position: relative;
   display: flex;
-  min-width: 259px;
-  min-height: 150px;
   margin-left: -30px;
   margin-right: -30px;
-  background-image: url("../img/backgrounds/video-mobile.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
   @media (min-width: $tablet-width) {
     order: 1;

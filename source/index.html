@@ -104,7 +104,11 @@
                 <dd class="highlight-product-info__value">15&nbsp;см</dd>
               </div>
             </dl>
-            <img class="highlight-product-info__image" src="./img/product-images/triple-set-mobile.jpg" width="260" height="315" alt="Вязаные корзинки">
+            <picture class="highlight-product-info__image">
+              <source media="(min-width: 1150px)" srcset="./img/product-images/triple-set-desktop.jpg 1x, ./img/product-images/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/product-images/triple-set-tablet.jpg 1x, ./img/product-images/triple-set-tablet@2x.jpg 2x">
+              <img src="./img/product-images/triple-set-mobile.jpg" srcset="./img/product-images/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки.">
+            </picture>
             <div class="highlight-product-info__price-wrapper">
               <b class="highlight-product-info__price">Цена: 990&nbsp;руб.</b>
               <button class="highlight-product-info__button button" type="button">Заказать</button>
