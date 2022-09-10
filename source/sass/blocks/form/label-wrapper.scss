@@ -194,7 +194,6 @@
   &:focus,
   &:focus-visible {
     border-bottom: 2px solid $hightlight-border;
-    outline: none;
   }
 
   &:active {
@@ -240,7 +239,6 @@
   &:focus-visible,
   &:active {
     border: 2px solid $hightlight-border;
-    outline: none;
   }
 
   &::placeholder {

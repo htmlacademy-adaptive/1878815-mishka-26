@@ -89,6 +89,18 @@
   padding: 10px;
   align-self: center;
 
+  fill: $primary-icon;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    fill: rgba($primary-icon, 0.6);
+  }
+
+  &:active {
+    fill: rgba($primary-icon, 0.3);
+  }
+
   @media (max-width: $mobile-width-only) {
     position: relative;
   }
@@ -98,10 +110,43 @@
     grid-column: 1 / -1;
     margin-right: auto;
     margin-bottom: auto;
+    width: 114px;
+    padding-top: 21px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: fit-content;
     margin: 0 auto auto;
+    padding: 8px;
+  }
+}
+
+.navigation__logo-icon {
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--desktop,
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--tablet,
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: flex;
+    }
   }
 }
