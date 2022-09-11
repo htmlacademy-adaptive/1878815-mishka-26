@@ -133,6 +133,10 @@
   cursor: pointer;
   fill: $primary-icon;
 
+  &--next {
+    transform: scaleX(-1);
+  }
+
   &:hover,
   &:focus,
   &:focus-visible {
