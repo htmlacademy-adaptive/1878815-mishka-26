@@ -4,7 +4,9 @@
   box-shadow: inset 0 -1px 0 $hightlight-border;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     color: $accent-font-additional;
     box-shadow: inset 0 -1px 0 $hightlight-border-additional;
   }

@@ -212,7 +212,9 @@
     padding: 10px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     color: rgba($primary-font, 0.6);
     fill: $accent-icon;
   }

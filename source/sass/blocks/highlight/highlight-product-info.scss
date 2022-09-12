@@ -22,7 +22,6 @@
   }
 }
 
-
 .highlight-product-info__intro {
   margin: 0;
   padding-bottom: 5px;
@@ -84,13 +83,15 @@
 
 .highlight-product-info__image {
   display: flex;
+  width: 100%;
+  height: 100%;
   padding: 15px 0;
   margin-left: auto;
   margin-right: auto;
+  object-fit: cover;
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    width: 100%;
     height: 100%;
     padding: 0;
     left: 100%;
@@ -99,6 +100,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
+    width: 150%;
     z-index: -1;
     bottom: 0;
     height: calc(100% + 100px);
@@ -111,9 +113,8 @@
   padding-top: 5px;
 }
 
-
 .highlight-product-info__price {
-  padding: 8px 0 25px;
+  padding: 8px 0 28px;
   color: $secondary-font;
   align-self: center;
 

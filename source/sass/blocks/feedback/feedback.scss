@@ -13,18 +13,28 @@
     padding-top: 82px;
     padding-bottom: 50px;
     margin-left: -50px;
-    margin-bottom: 68px;
-    background-image: url("../img/backgrounds/review.jpg");
-    background-position: initial;
+    margin-bottom: 58px;
+    background-image: url("../img/backgrounds/review-tablet.jpg");
     background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
     justify-content: space-between;
-    background-size: 45% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/review-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: 0;
+    margin-left: 0;
+    background-image: url("../img/backgrounds/review-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/review-desktop@2x.jpg");
+    }
   }
 }
 
@@ -65,7 +75,6 @@
     grid-column: 2/-1;
     justify-self: left;
     padding-left: 0;
-    padding-right: 50px;
     padding-top: 0;
   }
 }
@@ -99,9 +108,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: -3/-1;
-    padding-right: 50px;
     height: calc(100% - 165px);
-    top: 82px;
   }
 }
 
@@ -126,7 +133,9 @@
   cursor: pointer;
   fill: $primary-icon;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     fill: rgba($primary-icon, 0.6);
   }
 

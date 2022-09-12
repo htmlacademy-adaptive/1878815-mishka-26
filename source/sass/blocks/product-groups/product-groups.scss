@@ -37,7 +37,9 @@
   &:nth-child(even) {
     background-color: $hightlight-background-additional;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       background-color: lighten(saturate($hightlight-background-additional, 4%), 1%);
     }
   }
@@ -45,7 +47,9 @@
   &:nth-child(odd) {
     background-color: $hightlight-background;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       background-color: lighten(desaturate($hightlight-background, 2%), 1%);
     }
   }

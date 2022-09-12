@@ -29,12 +29,17 @@
   border: none;
   background-image: url("../img/backgrounds/zigzag-line.svg");
   background-size: contain;
-  background-position: center center;
+  background-position: center;
   background-repeat: repeat-x;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     margin-left: -50px;
     margin-right: -50px;
+    height: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 23px;
   }
 }

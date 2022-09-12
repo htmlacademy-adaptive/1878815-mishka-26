@@ -23,7 +23,9 @@
 
   @include big-text-bold;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     border: 2px solid $light-border;
   }
 
