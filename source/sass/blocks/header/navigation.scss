@@ -92,13 +92,14 @@
   fill: $primary-icon;
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     fill: rgba($primary-icon, 0.6);
+    outline: none;
   }
 
   &:active {
     fill: rgba($primary-icon, 0.3);
+    outline: none;
   }
 
   @media (max-width: $mobile-width-only) {

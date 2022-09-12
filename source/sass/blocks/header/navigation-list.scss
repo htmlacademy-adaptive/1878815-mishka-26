@@ -213,15 +213,16 @@
   }
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     color: rgba($primary-font, 0.6);
     fill: $accent-icon;
+    outline: none;
   }
 
   &:active {
     color: rgba($primary-font, 0.3);
     fill: rgba($accent-icon, 0.3);
+    outline: none;
   }
 }
 

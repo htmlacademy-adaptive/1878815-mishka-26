@@ -140,10 +140,12 @@
   &:hover,
   &:focus {
     fill: rgba($primary-icon, 0.6);
+    outline: none;
   }
 
   &:active {
     fill: rgba($primary-icon, 0.3);
+    outline: none;
   }
 
   @media (min-width: $tablet-width) {

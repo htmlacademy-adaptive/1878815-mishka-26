@@ -24,9 +24,9 @@
   @include big-text-bold;
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     border: 2px solid $light-border;
+    outline: none;
   }
 
   .sizes__size-input:checked + & {
@@ -37,5 +37,6 @@
     background-color: $dark-background;
     border: 2px solid $dark-border;
     color: rgba($hightlight-font, 0.3);
+    outline: none;
   }
 }

@@ -115,6 +115,7 @@
   &:focus,
   &:active {
     border-color: $hightlight-border;
+    outline: none;
   }
 
   &--radio {
@@ -193,10 +194,12 @@
   &:hover,
   &:focus {
     border-bottom: 2px solid $hightlight-border;
+    outline: none;
   }
 
   &:active {
     border-bottom: 2px solid $super-dark-border;
+    outline: none;
   }
 
   &--text::placeholder {
@@ -237,6 +240,7 @@
   &:focus,
   &:active {
     border: 2px solid $hightlight-border;
+    outline: none;
   }
 
   &::placeholder {

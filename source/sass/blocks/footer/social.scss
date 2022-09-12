@@ -10,8 +10,6 @@
   padding: 0;
   margin-left: 10px;
   margin-right: 10px;
-  align-items: center;
-  justify-items: center;
 
   &:first-child {
     margin-left: 0;
@@ -23,7 +21,7 @@
 }
 
 .social-list__link {
-  display: inline-block;
+  display: flex;
   box-sizing: border-box;
   padding: 5px;
   fill: $primary-icon;
@@ -31,10 +29,12 @@
   &:hover,
   &:focus {
     fill: $hightlight-icon;
+    outline: none;
   }
 
   &:active {
     fill: $hightlight-icon;
     opacity: 0.3;
+    outline: none;
   }
 }

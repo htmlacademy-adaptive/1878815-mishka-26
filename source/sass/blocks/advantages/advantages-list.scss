@@ -16,16 +16,21 @@
 
 .advantages-list__list-item {
   position: relative;
-  padding-top: 86px;
+  padding-top: 83px;
 
   &::before {
     position: absolute;
     content: "";
     width: 55px;
     height: 55px;
-    top: -16px;
+    top: 16px;
+    margin-left: -6px;
     background-position: center center;
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: -10px;
+    }
   }
 
   &--eco::before {
@@ -53,15 +58,16 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 55px;
+    padding-top: 54px;
   }
 }
 
 .advantages-list__header {
+  @include small-header;
+
   color: $primary-font;
   margin: 0;
-
-  @include small-header;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
     @include medium-header-tablet;
