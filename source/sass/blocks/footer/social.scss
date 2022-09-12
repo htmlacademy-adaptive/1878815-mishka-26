@@ -29,8 +29,7 @@
   fill: $primary-icon;
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     fill: $hightlight-icon;
   }
 

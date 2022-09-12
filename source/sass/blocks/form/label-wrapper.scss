@@ -113,7 +113,7 @@
 
   &:hover,
   &:focus,
-  &:focus-visible {
+  &:active {
     border-color: $hightlight-border;
   }
 
@@ -191,8 +191,7 @@
   background-color: transparent;
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     border-bottom: 2px solid $hightlight-border;
   }
 
@@ -236,7 +235,6 @@
 
   &:hover,
   &:focus,
-  &:focus-visible,
   &:active {
     border: 2px solid $hightlight-border;
   }

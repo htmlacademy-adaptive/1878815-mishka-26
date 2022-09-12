@@ -146,8 +146,7 @@
   cursor: pointer;
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     fill: $accent-icon;
   }
 
