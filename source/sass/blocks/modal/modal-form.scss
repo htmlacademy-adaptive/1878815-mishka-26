@@ -10,6 +10,7 @@
   border: 1px solid $light-border;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   align-content: center;
+  z-index: 3;
 }
 
 .modal-form__title {
@@ -27,7 +28,7 @@
 }
 
 .modal-form__legend {
-  margin: 0;
+  margin: auto;
   padding: 18px 0;
   color: $secondary-font;
   text-align: center;

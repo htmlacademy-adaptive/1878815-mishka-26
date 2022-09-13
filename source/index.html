@@ -136,15 +136,16 @@
             <div class="highlight-product-info__price-wrapper">
               <b class="highlight-product-info__price">Цена: 990&nbsp;руб.</b>
               <button class="highlight-product-info__button button" type="button">Заказать</button>
-              <!--display on 'highlight-product-info__button' click, add <div class="modal"> class "modal--opened" to show-->
+              <!--modal start - add 'opened' modifier on click 'cart' button-->
               <div class="modal">
+                <div class="modal__background"></div>
                 <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
                   <span class="modal-form__title">Добавить в&nbsp;корзину</span>
                   <fieldset class="modal-form__fieldset">
                     <legend class="modal-form__legend">Выберите размер:</legend>
                     <div class="sizes">
                       <label class="sizes__size-label">
-                        <input class="sizes__size-input visually-hidden sizes__size-input--s" type="radio" name="size" value="s" checked>
+                        <input class="sizes__size-input visually-hidden sizes__size-input--s" type="radio" name="size" value="s" checked="">
                         <span class="sizes__button">s</span>
                       </label>
                       <label class="sizes__size-label">
@@ -162,6 +163,7 @@
                   </button>
                 </form>
               </div>
+              <!--modal end-->
             </div>
           </div>
         </article>
@@ -279,5 +281,6 @@
       </div>
     </footer>
     <script src="js/navigation-toogle.js"></script>
+    <script src="js/order-modal.js"></script>
   </body>
 </html>

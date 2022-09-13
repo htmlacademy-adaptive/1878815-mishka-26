@@ -29,14 +29,12 @@
     outline: none;
   }
 
-  .sizes__size-input:checked + & {
+  &:active {
     border: 2px solid $hightlight-border;
   }
 
-  .sizes__size-input:active + & {
-    background-color: $dark-background;
-    border: 2px solid $dark-border;
-    color: rgba($hightlight-font, 0.3);
+  .sizes__size-input:checked + & {
+    border: 2px solid $hightlight-border;
     outline: none;
   }
 }
