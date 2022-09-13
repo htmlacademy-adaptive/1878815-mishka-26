@@ -37,4 +37,10 @@
     border: 2px solid $hightlight-border;
     outline: none;
   }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-grow: 1;
+    padding: 18px 34px;
+  }
 }

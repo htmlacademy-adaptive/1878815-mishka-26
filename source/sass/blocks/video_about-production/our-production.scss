@@ -8,7 +8,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     padding-top: 12px;
-    padding-bottom: 64px;
+    padding-bottom: 67px;
   }
 
   @media (min-width: $desktop-width) {
@@ -58,9 +58,14 @@
 
   @media (min-width: $tablet-width) {
     order: 2;
-    padding: 38px 65px 0;
+    padding: 34px 65px 0;
 
     @include medium-header-tablet;
+
+    &::before {
+      top: 35px;
+      left: -1px;
+    }
   }
 
   @media (min-width: $desktop-width) {

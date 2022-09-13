@@ -11,6 +11,11 @@
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   align-content: center;
   z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    width: 566px;
+    padding: 37.5px 105px 46px;
+  }
 }
 
 .modal-form__title {
@@ -19,6 +24,12 @@
   text-transform: uppercase;
 
   @include big-header;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 57px;
+  }
 }
 
 .modal-form__fieldset {
@@ -34,6 +45,10 @@
   text-align: center;
 
   @include text;
+
+  @media (min-width: $tablet-width) {
+    @include big-text;
+  }
 }
 
 .modal-form__add-to-cart-button {
