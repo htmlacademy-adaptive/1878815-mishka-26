@@ -11,7 +11,7 @@
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
-    padding: 40px;
+    padding: 42px 40px;
   }
 
   &::after {
@@ -21,7 +21,7 @@
     height: 1px;
     background-color: rgba($dark-border, 0.3);
     width: calc(100% - 60px);
-    top: calc(50% - 8px);
+    top: calc(50% + 2px);
 
     @media (min-width: $tablet-width) {
       display: none;
@@ -36,8 +36,6 @@
     display: inline-block;
     box-sizing: border-box;
     padding: 10px;
-    align-items: center;
-    justify-items: center;
     fill: $primary-icon;
 
     &:hover,
@@ -56,7 +54,8 @@
 .footer__made {
   display: flex;
   align-items: center;
-  padding-top: 25px;
+  padding: 45px 70px 0;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -67,14 +66,20 @@
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
+  padding-right: 27px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 16px;
+  }
 }
 
 .footer__made-link {
   display: inline-block;
   box-sizing: border-box;
-  padding: 15px;
-  align-items: center;
-  justify-items: center;
+  width: 27px;
+  height: 34px;
+  margin: 0;
   fill: $accent-icon;
 
   &:hover {
@@ -84,5 +89,10 @@
   &:active {
     fill: $hightlight-icon;
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    box-sizing: content-box;
+    padding: 10px;
   }
 }

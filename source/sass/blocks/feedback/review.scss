@@ -7,7 +7,7 @@
 
 .review__text {
   margin: 0;
-  padding: 15px 0;
+  padding: 14px 0;
   color: $secondary-font;
 
   @include text;
@@ -16,7 +16,7 @@
     @include big-text;
 
     line-height: 30px;
-    padding-bottom: 60px;
+    padding: 18px 0 62px;
   }
 
   @media (min-width: $desktop-width) {
@@ -28,7 +28,7 @@
 .review__author {
   display: flex;
   flex-direction: column;
-  padding: 16px 0;
+  padding: 18px 0;
 
   @media (min-width: $tablet-width) {
     max-width: 70%;

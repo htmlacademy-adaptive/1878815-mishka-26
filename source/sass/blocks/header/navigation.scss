@@ -33,13 +33,16 @@
   box-sizing: border-box;
   width: 44px;
   height: 44px;
-  margin: auto 0 auto auto;
   padding: 10px;
   border-style: none;
   background-color: transparent;
-  top: 8px;
-  right: 0;
+  top: 6px;
+  right: 2px;
   cursor: pointer;
+
+  &:active {
+    outline: none;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;

@@ -32,7 +32,6 @@
 .product-groups__list-item {
   display: flex;
   padding: 0;
-  justify-content: center;
 
   &:nth-child(even) {
     background-color: $hightlight-background-additional;
@@ -61,7 +60,7 @@
 
 .product-groups__product-link {
   display: flex;
-  padding: 18px 27px 24px 30px;
+  padding: 18px 27px 23px 30px;
   flex-grow: 1;
   align-items: center;
   justify-content: space-between;
@@ -80,7 +79,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 25px 35px 33px 36px;
+    padding: 25px 32px 33px 36px;
   }
 }
 
@@ -96,6 +95,10 @@
 }
 
 .product-groups__icon {
-  justify-self: center;
-  align-self: center;
+  width: 62px;
+  height: 62px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
 }

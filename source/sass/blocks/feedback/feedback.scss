@@ -48,7 +48,7 @@
     @include huge-header-tablet;
 
     max-width: 70%;
-    padding-left: 45px;
+    padding-left: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -92,13 +92,13 @@
 .feedback__buttons-wrapper {
   display: flex;
   flex-direction: column;
-  margin: auto;
   width: 100%;
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    max-width: fit-content;
-    height: calc(100% - 120px);
+    width: auto;
+    max-width: 30%;
+    height: calc(100% - 118px);
     right: 0;
     top: 78px;
     padding: 0;
@@ -109,14 +109,15 @@
   @media (min-width: $desktop-width) {
     grid-column: -3/-1;
     height: calc(100% - 165px);
+    max-width: fit-content;
   }
 }
 
 .feedback__toggles {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 35px;
+  padding-top: 15px;
+  padding-bottom: 37px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
