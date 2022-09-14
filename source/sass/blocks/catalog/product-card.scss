@@ -146,12 +146,13 @@
   cursor: pointer;
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     fill: $accent-icon;
+    outline: none;
   }
 
   &:active {
     fill: rgba($accent-icon, 0.3);
+    outline: none;
   }
 }

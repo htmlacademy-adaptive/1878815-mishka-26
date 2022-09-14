@@ -17,7 +17,7 @@
   }
 
   &--comment {
-    padding-top: 23px;
+    padding-top: 18px;
   }
 
   @media (min-width: $tablet-width) {
@@ -93,6 +93,14 @@
 .label-wrapper__input-icon {
   position: absolute;
   right: 10px;
+
+  @media (min-width: $tablet-width) {
+    right: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 5px;
+  }
 }
 
 .label-wrapper__input-caption {
@@ -113,8 +121,9 @@
 
   &:hover,
   &:focus,
-  &:focus-visible {
+  &:active {
     border-color: $hightlight-border;
+    outline: none;
   }
 
   &--radio {
@@ -124,7 +133,7 @@
   .label-wrapper__input--radio:checked + &--radio::after {
     position: absolute;
     top: 26%;
-    left: 25%;
+    left: 27%;
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -191,14 +200,14 @@
   background-color: transparent;
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     border-bottom: 2px solid $hightlight-border;
     outline: none;
   }
 
   &:active {
     border-bottom: 2px solid $super-dark-border;
+    outline: none;
   }
 
   &--text::placeholder {
@@ -237,7 +246,6 @@
 
   &:hover,
   &:focus,
-  &:focus-visible,
   &:active {
     border: 2px solid $hightlight-border;
     outline: none;

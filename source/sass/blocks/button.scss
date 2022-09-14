@@ -14,16 +14,17 @@
   @include small-header;
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     background-color: $dark-background;
     border: 2px solid $dark-border;
     color: $hightlight-font;
+    outline: none;
   }
 
   &:active {
     background-color: $dark-background;
     border: 2px solid $dark-border;
     color: rgba($hightlight-font, 0.3);
+    outline: none;
   }
 }

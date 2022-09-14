@@ -24,18 +24,23 @@
   @include big-text-bold;
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     border: 2px solid $light-border;
+    outline: none;
+  }
+
+  &:active {
+    border: 2px solid $hightlight-border;
   }
 
   .sizes__size-input:checked + & {
     border: 2px solid $hightlight-border;
+    outline: none;
   }
 
-  .sizes__size-input:active + & {
-    background-color: $dark-background;
-    border: 2px solid $dark-border;
-    color: rgba($hightlight-font, 0.3);
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-grow: 1;
+    padding: 18px 34px;
   }
 }

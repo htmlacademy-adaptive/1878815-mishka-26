@@ -42,15 +42,24 @@
   position: absolute;
   border: none;
   background-color: transparent;
-  left: 0;
   top: 0;
-  right: 0;
   bottom: 0;
+  left: calc(50% - 50px);
+  transition: transform 0.5s;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    outline: none;
+  }
+
   &:active,
-  &:focus,
   &:focus-visible {
+    transform: scale(1);
+    transition: transform 0.5s;
     opacity: 0.3;
+    outline: none;
   }
 }
