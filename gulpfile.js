@@ -8,8 +8,8 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
-//import sqoosh from 'gulp-libsquoosh';
-//import svgo from 'gulp-svgmin';
+import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
 //import del from 'del';
 
 // Styles
@@ -36,10 +36,31 @@ const html = () => {
 }
 
 // Scripts
-export const script  = () => {
+const script  = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
   .pipe(gulp.dest('build/js'));
+}
+
+//Images
+
+export const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(gulp.dest('build/img'));
+}
+
+export const optimizeImages = () => {
+  return gulp.src('build/img/**/*.{jpg,png}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'));
+}
+
+// Webp
+
+export const createWebp = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(squoosh({webp:{}}))
+  .pipe(gulp.dest('build/img'));
 }
 
 // Server
@@ -63,7 +84,6 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-
 export default gulp.series(
-  html, styles, script, server, watcher,
+  optimizeImages, optimizeImages, createWebp, html, styles, script, server, watcher
 );
