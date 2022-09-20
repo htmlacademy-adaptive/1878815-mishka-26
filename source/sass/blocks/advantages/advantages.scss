@@ -5,12 +5,12 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     padding-top: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 83px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 60px;
-    padding-bottom: 65px;
+    padding-bottom: 90px;
     grid-column: 2 / -2;
   }
 }
