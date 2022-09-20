@@ -1,0 +1,30 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 26px;
+  background-color: $primary-background;
+  border: 2px solid $dark-border;
+  color: $secondary-font;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include small-header;
+
+  &:hover,
+  &:focus {
+    background-color: $dark-background;
+    border: 2px solid $dark-border;
+    color: $hightlight-font;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $dark-background;
+    border: 2px solid $dark-border;
+    color: rgba($hightlight-font, 0.3);
+    outline: none;
+  }
+}

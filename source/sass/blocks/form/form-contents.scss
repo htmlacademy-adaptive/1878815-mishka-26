@@ -1,0 +1,126 @@
+.form-contents {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.form-contents__description {
+  display: flex;
+  padding-bottom: 29px;
+  font-size: 13px;
+  line-height: 24px;
+  color: $secondary-font;
+
+  @media (min-width: $tablet-width) {
+    @include big-text;
+
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / -2;
+    padding-bottom: 31px;
+  }
+}
+
+.form-contents__fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  & + & {
+    margin-top: 32px;
+  }
+
+  & + &--name {
+    margin-top: 33px;
+  }
+
+  & + &--contact {
+    display: grid;
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+
+  & + &--comment {
+    margin-top: 23px;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 33px;
+
+    & + &--contact {
+      gap: 0;
+      padding-bottom: 30px;
+    }
+
+    & + &--comment {
+      margin-top: 35px;
+    }
+
+    &:nth-of-type(even)::before {
+      position: absolute;
+      height: calc(100% + 30px);
+      width: calc(120% + 100px);
+      margin-left: -50px;
+      display: flex;
+      background-color: #f1f1f1;
+      z-index: -1;
+      content: "";
+      top: -12px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -2;
+
+    & + &--name {
+      margin-top: 29px;
+    }
+  }
+}
+
+.form-contents__button-disclaimer-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 17px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
+    grid-column: 2 / -2;
+    align-items: baseline;
+  }
+}
+
+.form-contents__disclaimer {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: $secondary-font;
+  padding-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+
+    @include big-text;
+  }
+}
+
+.form-contents__button {
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+    max-width: fit-content;
+  }
+}

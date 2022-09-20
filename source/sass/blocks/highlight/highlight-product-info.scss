@@ -1,0 +1,126 @@
+.highlight-product-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 18px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    box-sizing: border-box;
+    width: 50%;
+    min-height: 404px;
+    padding-top: 0;
+    padding-right: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+    grid-column: 2 / -4;
+    width: 100%;
+    padding-right: 58px;
+    justify-content: space-between;
+  }
+}
+
+.highlight-product-info__intro {
+  margin: 0;
+  padding-bottom: 5px;
+  color: $secondary-font;
+
+  @include text;
+
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    @include big-text;
+
+    line-height: 30px;
+    padding-bottom: 0;
+  }
+}
+
+.highlight-product-info__details {
+  margin: 18px 0;
+  color: $secondary-font;
+
+  @include text;
+
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 22px;
+    padding-bottom: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 35px;
+    padding-bottom: 71px;
+  }
+}
+
+.highlight-product-info__details-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.66fr;
+  margin: 0;
+  padding: 5px 0 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba($light-border, 0.4);
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.highlight-product-info__name {
+  display: flex;
+  margin: 0;
+  margin-right: auto;
+}
+
+.highlight-product-info__value {
+  display: flex;
+  margin: 0;
+}
+
+.highlight-product-info__image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    padding: 0;
+    left: 100%;
+    height: calc(100% - 15px);
+    bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 150%;
+    z-index: -1;
+    bottom: 0;
+    height: calc(100% + 155px);
+  }
+}
+
+.highlight-product-info__price-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.highlight-product-info__price {
+  padding: 8px 0 28px;
+  color: $secondary-font;
+  align-self: center;
+
+  @include small-header;
+
+  @media (min-width: $tablet-width) {
+    @include medium-header-tablet;
+
+    padding-bottom: 32px;
+  }
+}

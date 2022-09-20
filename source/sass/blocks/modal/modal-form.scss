@@ -1,0 +1,60 @@
+.modal-form {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 320px;
+  margin: auto;
+  padding: 28.5px 30px 46px;
+  background-color: $primary-background;
+  border: 1px solid $light-border;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  align-content: center;
+  z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    width: 566px;
+    padding: 37.5px 105px 46px;
+  }
+}
+
+.modal-form__title {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include big-header;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal-form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-form__legend {
+  margin: auto;
+  padding: 18px 0;
+  color: $secondary-font;
+  text-align: center;
+
+  @include text;
+
+  @media (min-width: $tablet-width) {
+    @include big-text;
+  }
+}
+
+.modal-form__add-to-cart-button {
+  color: $hightlight-font;
+  border: 2px solid $hightlight-border;
+  background-color: $hightlight-background;
+  font-size: 17px;
+  line-height: 16px;
+}

@@ -1,0 +1,101 @@
+.advantages-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    padding-top: 42px;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 57px 70px;
+  }
+}
+
+.advantages-list__list-item {
+  position: relative;
+  padding-top: 83px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 55px;
+    top: 16px;
+    margin-left: -6px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: -10px;
+    }
+  }
+
+  &--eco::before {
+    background-image: url("../img/icons/icon-flower.svg");
+  }
+
+  &--price::before {
+    background-image: url("../img/icons/icon-money.svg");
+  }
+
+  &--likes::before {
+    background-image: url("../img/icons/icon-heart.svg");
+  }
+
+  &--handmade::before {
+    background-image: url("../img/icons/icon-knit.svg");
+  }
+
+  &--local::before {
+    background-image: url("../img/icons/icon-rocket.svg");
+  }
+
+  &--gift::before {
+    background-image: url("../img/icons/icon-gift.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 54px;
+
+    &--eco {
+      order: 1;
+    }
+
+    &--price {
+      order: 3;
+    }
+
+    &--likes {
+      order: 5;
+    }
+
+    &--handmade {
+      order: 2;
+    }
+
+    &--local {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
+    }
+  }
+}
+
+.advantages-list__header {
+  @include small-header;
+
+  color: $primary-font;
+  margin: 0;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include medium-header-tablet;
+
+    line-height: 22px;
+  }
+}

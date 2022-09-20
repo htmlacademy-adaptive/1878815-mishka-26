@@ -1,0 +1,33 @@
+.highlight {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    grid-column: 1 / -1;
+    padding-top: 52px;
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 63px;
+  }
+}
+
+.highlight__highlight-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}

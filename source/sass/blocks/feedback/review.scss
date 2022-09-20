@@ -1,0 +1,60 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.review__text {
+  margin: 0;
+  padding: 14px 0;
+  color: $secondary-font;
+
+  @include text;
+
+  @media (min-width: $tablet-width) {
+    @include big-text;
+
+    line-height: 30px;
+    padding: 18px 0 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 45px;
+  }
+}
+
+.review__author {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 70%;
+    padding: 0;
+  }
+}
+
+.review__name {
+  color: $primary-font;
+  font-style: normal;
+
+  @include big-text-bold;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include big-text-bold;
+  }
+}
+
+.review__social {
+  color: $secondary-font;
+  font-style: normal;
+  padding-top: 7px;
+
+  @include big-text;
+}

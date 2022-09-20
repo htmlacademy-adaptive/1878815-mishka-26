@@ -1,0 +1,40 @@
+.social-list {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-list__item {
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-list__link {
+  display: flex;
+  box-sizing: border-box;
+  padding: 5px;
+  fill: $primary-icon;
+
+  &:hover,
+  &:focus {
+    fill: $hightlight-icon;
+    outline: none;
+  }
+
+  &:active {
+    fill: $hightlight-icon;
+    opacity: 0.3;
+    outline: none;
+  }
+}
